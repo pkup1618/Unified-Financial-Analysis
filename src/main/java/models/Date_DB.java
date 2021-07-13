@@ -49,4 +49,13 @@ public class Date_DB {
     public void setCashless_value_on_day_end(float cashless_value_on_day_end) {
         this.cashless_value_on_day_end = cashless_value_on_day_end;
     }
+    public Date_DB(){}
+
+    public Date_DB(Date day, float cs, float ce, float bs, float be) {
+        setDay(new Date(System.currentTimeMillis()));
+        setCash_value_on_day_start(cs);
+        setCash_value_on_day_end(ce);
+        setCashless_value_on_day_start(bs);
+        setCashless_value_on_day_end(be);
+    }
 }
