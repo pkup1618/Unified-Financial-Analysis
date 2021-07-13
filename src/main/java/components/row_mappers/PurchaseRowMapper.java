@@ -6,6 +6,9 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * (ORM) Класс, реализующий отображение из модели в строку таблицы базы данных
+ */
 public class PurchaseRowMapper implements RowMapper<Purchase_DB> {
 
     @Override
