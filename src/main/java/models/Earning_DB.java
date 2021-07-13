@@ -54,5 +54,13 @@ public class Earning_DB {
         this.day = day;
     }
 
+    Earning_DB(){}
 
+    Earning_DB(String earning_name, String earning_type, float earning_cost, int count, Date day){
+        setEarning_name(earning_name);
+        setEarning_type(earning_type);
+        setEarning_cost(earning_cost);
+        setCount(count);
+        setDay(day);
+    }
 }
