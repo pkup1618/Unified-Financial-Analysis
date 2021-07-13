@@ -53,7 +53,7 @@ public class Purchase_DB {
 
     public Purchase_DB(){}
 
-    Purchase_DB(String purchase_name, String purchase_type, float purchase_cost, int count, Date day){
+    public Purchase_DB(String purchase_name, String purchase_type, float purchase_cost, int count, Date day){
         setPurchase_name(purchase_name);
         setPurchase_type(purchase_type);
         setPurchase_cost(purchase_cost);
