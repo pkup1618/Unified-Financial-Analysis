@@ -1,6 +1,6 @@
-package components.row_mappers;
+package components.database_handling.row_mappers;
 
-import models.Earning_DB;
+import components.database_handling.models.Earning_DB;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
