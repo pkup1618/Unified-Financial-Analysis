@@ -1,7 +1,14 @@
 package components.database_handling.models;
 
+import jdk.jfr.Period;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
 import java.sql.Date;
 
+@Component
+@Scope("prototype")
 public class Date_DB {
 
     private Date day;
@@ -51,11 +58,14 @@ public class Date_DB {
     }
     public Date_DB(){}
 
-    public Date_DB(Date day, float cs, float ce, float bs, float be) {
+    public Date_DB(Date day, float cash_value_on_day_start,
+                   float cash_value_on_day_end,
+                   float cashless_value_on_day_start,
+                   float cashless_value_on_day_end) {
         setDay(new Date(System.currentTimeMillis()));
-        setCash_value_on_day_start(cs);
-        setCash_value_on_day_end(ce);
-        setCashless_value_on_day_start(bs);
-        setCashless_value_on_day_end(be);
+        setCash_value_on_day_start(cash_value_on_day_start);
+        setCash_value_on_day_end(cash_value_on_day_end);
+        setCashless_value_on_day_start(cashless_value_on_day_start);
+        setCashless_value_on_day_end(cash_value_on_day_end);
     }
 }

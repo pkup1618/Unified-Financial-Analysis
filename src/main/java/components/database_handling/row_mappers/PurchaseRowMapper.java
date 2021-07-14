@@ -1,7 +1,9 @@
 package components.database_handling.row_mappers;
 
 import components.database_handling.models.Purchase_DB;
+import org.springframework.context.annotation.Scope;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -9,6 +11,8 @@ import java.sql.SQLException;
 /**
  * (ORM) Класс, реализующий отображение из модели в строку таблицы базы данных
  */
+@Component
+@Scope("singleton")
 public class PurchaseRowMapper implements RowMapper<Purchase_DB> {
 
     @Override

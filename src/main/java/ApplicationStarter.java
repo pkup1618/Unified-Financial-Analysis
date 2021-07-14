@@ -18,11 +18,12 @@ public class ApplicationStarter {
             System.out.println(name);
         }
 
-        DatabaseRequestsHandler databaseRequestsHandler =
-                applicationContext.getBean("databaseRequestsHandler", DatabaseRequestsHandler.class);
 
-        Date_DB date_db = new Date_DB(new Date(System.currentTimeMillis()), 30, 30, 30, 30);
-        databaseRequestsHandler.setDay(date_db);
-        System.out.println(databaseRequestsHandler.checkDateForExistence(new Date(System.currentTimeMillis())));
+        //DatabaseRequestsHandler databaseRequestsHandler =
+        //        applicationContext.getBean("databaseRequestsHandler", DatabaseRequestsHandler.class);
+
+        //Date_DB date_db = new Date_DB(new Date(System.currentTimeMillis()), 30, 30, 30, 30);
+        //databaseRequestsHandler.setDay(date_db);
+        //System.out.println(databaseRequestsHandler.checkDateForExistence(new Date(System.currentTimeMillis())));
     }
 }

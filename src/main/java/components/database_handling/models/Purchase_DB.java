@@ -1,8 +1,14 @@
 package components.database_handling.models;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
 import java.sql.Date;
 
+@Component
+@Scope("prototype")
 public class Purchase_DB {
 
     private String purchase_name;

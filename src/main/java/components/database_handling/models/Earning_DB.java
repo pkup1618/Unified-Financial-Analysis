@@ -4,8 +4,14 @@ package components.database_handling.models;
 В объектах этого класса мне уже не важно как они взялись.
  */
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
 import java.sql.Date;
 
+@Component
+@Scope("prototype")
 public class Earning_DB {
 
     private String earning_name;

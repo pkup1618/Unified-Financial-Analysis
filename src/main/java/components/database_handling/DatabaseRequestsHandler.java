@@ -7,6 +7,7 @@ import components.database_handling.models.Date_DB;
 import components.database_handling.models.Earning_DB;
 import components.database_handling.models.Purchase_DB;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
@@ -18,6 +19,7 @@ import java.util.List;
  * (выборку из таблиц), но не должны обрабатывать эти данные)
  * */
 @Component
+@Scope("singleton")
 public class DatabaseRequestsHandler {
 
     /** Текущее число */
@@ -138,6 +140,4 @@ public class DatabaseRequestsHandler {
     public List<Earning_DB> getEarningsInTimePeriod(Date lessDate, Date moreDate) {
         return jdbcTemplate.query("SELECT * FROM earning WHERE day BETWEEN (? AND ?)", new EarningRowMapper(), lessDate, moreDate);
     }
-
-
 }
