@@ -1,16 +1,23 @@
-package models;
+package components.database_handling.models;
 /*
 Меня не интересуют внешние ключи, так как это нужно лишь для удобства составления запросов.
 В объектах этого класса мне уже не важно как они взялись.
  */
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
 import java.sql.Date;
 
+@Component
+@Scope("prototype")
 public class Earning_DB {
 
     private String earning_name;
     private String earning_type;
     private float earning_cost;
+    private String payment_type;
     private int count;
     private Date day;
 
@@ -38,6 +45,10 @@ public class Earning_DB {
         this.earning_cost = earning_cost;
     }
 
+    public String getPayment_type() { return payment_type; }
+
+    public void setPayment_type(String payment_type) { this.payment_type = payment_type; }
+
     public int getCount() {
         return count;
     }
@@ -46,9 +57,7 @@ public class Earning_DB {
         this.count = count;
     }
 
-    public Date getDay() {
-        return day;
-    }
+    public Date getDay() { return day; }
 
     public void setDay(Date day) {
         this.day = day;
@@ -60,7 +69,9 @@ public class Earning_DB {
         setEarning_name(earning_name);
         setEarning_type(earning_type);
         setEarning_cost(earning_cost);
+
         setCount(count);
         setDay(day);
     }
+
 }

@@ -1,5 +1,6 @@
-import components.DataAccessObject;
-import models.Date_DB;
+import components.configures.SpringConfig;
+import components.database_handling.DatabaseRequestsHandler;
+import components.database_handling.models.Date_DB;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import java.sql.Date;
@@ -17,10 +18,12 @@ public class ApplicationStarter {
             System.out.println(name);
         }
 
-        DataAccessObject dao = applicationContext.getBean("dataAccessObject", DataAccessObject.class);
 
-        Date_DB date_db = new Date_DB(new Date(System.currentTimeMillis()), 30, 30, 30, 30);
-        dao.setDay(date_db);
-        System.out.println(dao.checkDateForExistence(new Date(System.currentTimeMillis())));
+        //DatabaseRequestsHandler databaseRequestsHandler =
+        //        applicationContext.getBean("databaseRequestsHandler", DatabaseRequestsHandler.class);
+
+        //Date_DB date_db = new Date_DB(new Date(System.currentTimeMillis()), 30, 30, 30, 30);
+        //databaseRequestsHandler.setDay(date_db);
+        //System.out.println(databaseRequestsHandler.checkDateForExistence(new Date(System.currentTimeMillis())));
     }
 }

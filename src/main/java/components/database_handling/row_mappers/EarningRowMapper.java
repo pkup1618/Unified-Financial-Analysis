@@ -1,7 +1,9 @@
-package components.row_mappers;
+package components.database_handling.row_mappers;
 
-import models.Earning_DB;
+import components.database_handling.models.Earning_DB;
+import org.springframework.context.annotation.Scope;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -9,6 +11,8 @@ import java.sql.SQLException;
 /**
  * (ORM) Класс, реализующий отображение из модели в строку таблицы базы данных
  */
+@Component
+@Scope("singleton")
 public class EarningRowMapper implements RowMapper<Earning_DB> {
 
     @Override
@@ -19,6 +23,7 @@ public class EarningRowMapper implements RowMapper<Earning_DB> {
         earningDB.setEarning_name(resultSet.getString("earning_name"));
         earningDB.setEarning_type(resultSet.getString("earning_type"));
         earningDB.setEarning_cost(resultSet.getFloat("earning_cost"));
+        earningDB.setPayment_type(resultSet.getString("payment_type"));
         earningDB.setCount(resultSet.getInt("count"));
         earningDB.setDay(resultSet.getDate("day"));
 
