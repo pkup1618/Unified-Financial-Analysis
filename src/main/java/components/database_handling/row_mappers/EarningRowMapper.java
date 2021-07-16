@@ -23,6 +23,7 @@ public class EarningRowMapper implements RowMapper<Earning_DB> {
         earningDB.setEarning_name(resultSet.getString("earning_name"));
         earningDB.setEarning_type(resultSet.getString("earning_type"));
         earningDB.setEarning_cost(resultSet.getFloat("earning_cost"));
+        earningDB.setPayment_type(resultSet.getString("payment_type"));
         earningDB.setCount(resultSet.getInt("count"));
         earningDB.setDay(resultSet.getDate("day"));
 

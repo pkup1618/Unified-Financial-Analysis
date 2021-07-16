@@ -14,6 +14,7 @@ public class Purchase_DB {
     private String purchase_name;
     private String purchase_type;
     private float purchase_cost;
+    private String payment_type;
     private int count;
     private Date day;
 
@@ -40,6 +41,10 @@ public class Purchase_DB {
     public void setPurchase_cost(float purchase_cost) {
         this.purchase_cost = purchase_cost;
     }
+
+    public String getPayment_type() { return payment_type; }
+
+    public void setPayment_type(String payment_type) { this.payment_type = payment_type; }
 
     public int getCount() {
         return count;

@@ -6,6 +6,7 @@ import components.database_handling.row_mappers.PurchaseRowMapper;
 import components.database_handling.models.Date_DB;
 import components.database_handling.models.Earning_DB;
 import components.database_handling.models.Purchase_DB;
+import components.support_classes.MoneyDifferenceInTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -139,5 +140,43 @@ public class DatabaseRequestsHandler {
      */
     public List<Earning_DB> getEarningsInTimePeriod(Date lessDate, Date moreDate) {
         return jdbcTemplate.query("SELECT * FROM earning WHERE day BETWEEN (? AND ?)", new EarningRowMapper(), lessDate, moreDate);
+    }
+
+    /**
+     * Получить общую сумму доходов за промежуток времени
+     * @param lessDate календарное число (то, которое хронологически идёт раньше)
+     * @param moreDate календарное число (то, которое хронологически идёт позже)
+     * @return объект-контейнер, содержащий суммарные стоимости, разделенные по типу оплаты
+     */
+    public MoneyDifferenceInTime getTotalMoneyEarningsInTimePeriod(Date lessDate, Date moreDate) {
+        List<Earning_DB> earnings = getEarningsInTimePeriod(lessDate, moreDate);
+        MoneyDifferenceInTime moneyDifferenceInTime = new MoneyDifferenceInTime();
+
+        for (Earning_DB earning: earnings) {
+            if (earning.getPayment_type() == "cash")
+                moneyDifferenceInTime.addCash_total_value(earning.getEarning_cost() * earning.getCount());
+            else
+                moneyDifferenceInTime.addCashless_total_value(earning.getEarning_cost() * earning.getCount());
+        }
+        return moneyDifferenceInTime;
+    }
+
+    /**
+     * Получить общую сумму расходов за промежуток времени. Различает типы оплаты "cash", "cashless"
+     * @param lessDate календарное число (то, которое хронологически идёт раньше)
+     * @param moreDate календарное число (то, которое хронологически идёт позже)
+     * @return
+     */
+    public MoneyDifferenceInTime getTotalMoneyPurchasesInTimePeriod(Date lessDate, Date moreDate) {
+        List<Purchase_DB> purchases = getPurchasesInTimePeriod(lessDate, moreDate);
+        MoneyDifferenceInTime moneyDifferenceInTime = new MoneyDifferenceInTime();
+
+        for (Purchase_DB purchase: purchases) {
+            if (purchase.getPayment_type() == "cashless")
+                moneyDifferenceInTime.addCash_total_value(purchase.getPurchase_cost() * purchase.getCount());
+            else
+                moneyDifferenceInTime.addCashless_total_value(purchase.getPurchase_cost() * purchase.getCount());
+        }
+        return moneyDifferenceInTime;
     }
 }

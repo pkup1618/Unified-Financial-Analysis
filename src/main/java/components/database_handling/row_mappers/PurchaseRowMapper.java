@@ -23,6 +23,7 @@ public class PurchaseRowMapper implements RowMapper<Purchase_DB> {
         purchaseDB.setPurchase_name(resultSet.getString("purchase_name"));
         purchaseDB.setPurchase_type(resultSet.getString("purchase_type"));
         purchaseDB.setPurchase_cost(resultSet.getFloat("purchase_cost"));
+        purchaseDB.setPayment_type(resultSet.getString("payment_type"));
         purchaseDB.setCount(resultSet.getInt("count"));
         purchaseDB.setDay(resultSet.getDate("day"));
 
