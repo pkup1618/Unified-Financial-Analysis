@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="web_app_latest">
+    <output-path>$PROJECT_DIR$/../../../../Program Files/Apache Software Foundation/Tomcat 10.0/webapps</output-path>
+    <root id="archive" name="web_app_latest.war">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="mm_app" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.checkerframework:checker-qual:3.5.0" />
+          <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.2.23" />
+          <element id="library" level="project" name="Maven: jakarta.servlet:jakarta.servlet-api:5.0.0" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="mm_app/web/Web" />
+    </root>
+  </artifact>
+</component>
