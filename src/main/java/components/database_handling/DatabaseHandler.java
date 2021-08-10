@@ -4,8 +4,11 @@ package components.database_handling;
 import components.database_handling.models.Date_DB;
 import components.database_handling.models.Earning_DB;
 import components.database_handling.models.Purchase_DB;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -21,6 +24,7 @@ public class DatabaseHandler {
         connection = null;
 
         try {
+            Class.forName("org.postgresql.Driver");
             postgreSqlDriver = DriverManager.getDriver("jdbc:postgresql://localhost:5709/money_management_db");
             DriverManager.registerDriver(postgreSqlDriver);
 
@@ -33,8 +37,8 @@ public class DatabaseHandler {
                 System.exit(0);
             }
         }
-        catch (SQLException throwables) {
-            throwables.printStackTrace();
+        catch (SQLException | ClassNotFoundException throwable) {
+            throwable.printStackTrace();
         }
     }
 
@@ -64,23 +68,23 @@ public class DatabaseHandler {
         statement.setString(1, purchaseDB.getPurchase_name());
         statement.setString(2, purchaseDB.getPurchase_type());
         statement.setDouble(3, purchaseDB.getPurchase_cost());
-        statement.setInt(4, purchaseDB.getCount());
+        statement.setLong(4, purchaseDB.getCount());
         statement.setDate(5, purchaseDB.getDay());
 
-        statement.executeQuery();
+        statement.executeUpdate();
     }
 
     public void setEarning(Earning_DB earningDB) throws SQLException {
         PreparedStatement statement = connection.
-                prepareStatement("INSERT INTO purchase VALUES(?, ?, ?, ?, ?)");
+                prepareStatement("INSERT INTO earning VALUES(?, ?, ?, ?, ?)");
 
         statement.setString(1, earningDB.getEarning_name());
         statement.setString(2, earningDB.getEarning_type());
         statement.setDouble(3, earningDB.getEarning_cost());
-        statement.setInt(4, earningDB.getCount());
+        statement.setLong(4, earningDB.getCount());
         statement.setDate(5, earningDB.getDay());
 
-        statement.executeQuery();
+        statement.executeUpdate();
     }
 
     public void setDay(Date_DB dateDB) throws SQLException {
@@ -93,7 +97,7 @@ public class DatabaseHandler {
         statement.setDouble(4, dateDB.getCashless_value_on_day_start());
         statement.setDouble(5, dateDB.getCashless_value_on_day_end());
 
-        statement.executeQuery();
+        statement.executeUpdate();
     }
 
     //todo удостовериться, нет ли способа удобнее
@@ -148,8 +152,29 @@ public class DatabaseHandler {
         return rs;
     }
 
-/*
 
+    public String convertResultSetToJson(ResultSet resultSet) throws SQLException {
+
+        JSONArray allJsonRows = new JSONArray();
+        int numberColumns = resultSet.getMetaData().getColumnCount();
+        ResultSetMetaData metaData = resultSet.getMetaData();
+
+        while(resultSet.next()) {
+            JSONObject jsonRow = new JSONObject();
+
+            for(int i = 1; i <= numberColumns; i++) {
+                String RowElem = resultSet.getString(i);
+                String ColumnName = metaData.getColumnName(i);
+
+                jsonRow.put(ColumnName, RowElem);
+            }
+            allJsonRows.add(jsonRow);
+        }
+        resultSet.close();
+        return allJsonRows.toJSONString();
+    }
+
+/*
     public MoneyDifferenceInTime getTotalMoneyEarningsInTimePeriod(Date lessDate, Date moreDate) {
         List<Earning_DB> earnings = getEarningsInTimePeriod(lessDate, moreDate);
         MoneyDifferenceInTime moneyDifferenceInTime = new MoneyDifferenceInTime();

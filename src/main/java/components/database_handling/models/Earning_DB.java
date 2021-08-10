@@ -6,9 +6,9 @@ public class Earning_DB {
 
     private String earning_name;
     private String earning_type;
-    private float earning_cost;
+    private Double earning_cost;
     private String payment_type;
-    private int count;
+    private Long count;
     private Date day;
 
     public String getEarning_name() {
@@ -27,11 +27,11 @@ public class Earning_DB {
         this.earning_type = earning_type;
     }
 
-    public float getEarning_cost() {
+    public Double getEarning_cost() {
         return earning_cost;
     }
 
-    public void setEarning_cost(float earning_cost) {
+    public void setEarning_cost(Double earning_cost) {
         this.earning_cost = earning_cost;
     }
 
@@ -43,11 +43,11 @@ public class Earning_DB {
         this.payment_type = payment_type;
     }
 
-    public int getCount() {
+    public Long getCount() {
         return count;
     }
 
-    public void setCount(int count) {
+    public void setCount(Long count) {
         this.count = count;
     }
 
@@ -59,14 +59,12 @@ public class Earning_DB {
         this.day = day;
     }
 
-    public Earning_DB() {
-    }
+    public Earning_DB() { }
 
-    public Earning_DB(String earning_name, String earning_type, float earning_cost, int count, Date day) {
+    public Earning_DB(String earning_name, String earning_type, Double earning_cost, Long count, Date day) {
         setEarning_name(earning_name);
         setEarning_type(earning_type);
         setEarning_cost(earning_cost);
-
         setCount(count);
         setDay(day);
     }

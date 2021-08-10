@@ -10,6 +10,9 @@
           <element id="library" level="project" name="Maven: org.checkerframework:checker-qual:3.5.0" />
           <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.2.23" />
           <element id="library" level="project" name="Maven: jakarta.servlet:jakarta.servlet-api:5.0.0" />
+          <element id="library" level="project" name="Maven: com.googlecode.json-simple:json-simple:1.1.1" />
+          <element id="library" level="project" name="Maven: junit:junit:4.10" />
+          <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-core:1.1" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="mm_app/web/Web" />

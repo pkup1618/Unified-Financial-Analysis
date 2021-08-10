@@ -6,10 +6,11 @@
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>forget</secret-storage>
       <user-name>postgres</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="database" qname="@">
+          <node kind="database" qname="money_management_db">
             <node kind="schema" qname="@" />
           </node>
         </introspection-scope>

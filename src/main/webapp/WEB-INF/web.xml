@@ -8,10 +8,106 @@
         <servlet-name>mainServlet</servlet-name>
         <servlet-class>servlets.MainServlet</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>mainServlet</servlet-name>
         <url-pattern>/lets</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getAllDaysServlet</servlet-name>
+        <servlet-class>servlets.get_command_servlets.GetAllDaysServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getAllDaysServlet</servlet-name>
+        <url-pattern>/getAllDays</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getAllEarningsServlet</servlet-name>
+        <servlet-class>servlets.get_command_servlets.GetAllEarningsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getAllEarningsServlet</servlet-name>
+        <url-pattern>/getAllEarnings</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getAllPurchasesServlet</servlet-name>
+        <servlet-class>servlets.get_command_servlets.GetAllPurchasesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getAllPurchasesServlet</servlet-name>
+        <url-pattern>/getAllPurchases</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getDayEarnings</servlet-name>
+        <servlet-class>servlets.get_command_servlets.GetDayEarningsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getDayEarnings</servlet-name>
+        <url-pattern>/getDayEarnings</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getDayPurchases</servlet-name>
+        <servlet-class>servlets.get_command_servlets.GetDayPurchasesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getDayPurchases</servlet-name>
+        <url-pattern>/getDayPurchases</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getEarningsInTimePeriod</servlet-name>
+        <servlet-class>servlets.get_command_servlets.GetEarningsInTimePeriodServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getEarningsInTimePeriod</servlet-name>
+        <url-pattern>/getEarningsInTimePeriod</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getPurchasesInTimePeriod</servlet-name>
+        <servlet-class>servlets.get_command_servlets.GetPurchasesInTimePeriodServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getPurchasesInTimePeriod</servlet-name>
+        <url-pattern>/getPurchasesInTimePeriod</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>setDayServlet</servlet-name>
+        <servlet-class>servlets.send_command_servlets.SetDayServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>setDayServlet</servlet-name>
+        <url-pattern>/setDay</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>setEarningServlet</servlet-name>
+        <servlet-class>servlets.send_command_servlets.SetEarningServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>setEarningServlet</servlet-name>
+        <url-pattern>/setEarning</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>setPurchaseServlet</servlet-name>
+        <servlet-class>servlets.send_command_servlets.SetPurchaseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>setPurchaseServlet</servlet-name>
+        <url-pattern>/setPurchase</url-pattern>
+    </servlet-mapping>
+
+    <resource-ref>
+        <description>DB Connection</description>
+        <res-ref-name>jdbc/TestDB</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
 
 </web-app>

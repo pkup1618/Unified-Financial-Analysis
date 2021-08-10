@@ -6,9 +6,9 @@ public class Purchase_DB {
 
     private String purchase_name;
     private String purchase_type;
-    private float purchase_cost;
+    private Double purchase_cost;
     private String payment_type;
-    private int count;
+    private Long count;
     private Date day;
 
     public String getPurchase_name() {
@@ -27,11 +27,11 @@ public class Purchase_DB {
         this.purchase_type = purchase_type;
     }
 
-    public float getPurchase_cost() {
+    public Double getPurchase_cost() {
         return purchase_cost;
     }
 
-    public void setPurchase_cost(float purchase_cost) {
+    public void setPurchase_cost(Double purchase_cost) {
         this.purchase_cost = purchase_cost;
     }
 
@@ -39,11 +39,11 @@ public class Purchase_DB {
 
     public void setPayment_type(String payment_type) { this.payment_type = payment_type; }
 
-    public int getCount() {
+    public long getCount() {
         return count;
     }
 
-    public void setCount(int count) {
+    public void setCount(long count) {
         this.count = count;
     }
 
@@ -57,7 +57,7 @@ public class Purchase_DB {
 
     public Purchase_DB(){}
 
-    public Purchase_DB(String purchase_name, String purchase_type, float purchase_cost, int count, Date day){
+    public Purchase_DB(String purchase_name, String purchase_type, double purchase_cost, long count, Date day){
         setPurchase_name(purchase_name);
         setPurchase_type(purchase_type);
         setPurchase_cost(purchase_cost);
