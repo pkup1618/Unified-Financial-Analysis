@@ -21,7 +21,7 @@ public abstract class GetDayElemsServlet extends ParentServlet {
     PrintWriter responseWriter;
 
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) {
         requestBody = getRequestBody(request);
         jsonRequestBody = parseJsonFromString(requestBody);
 

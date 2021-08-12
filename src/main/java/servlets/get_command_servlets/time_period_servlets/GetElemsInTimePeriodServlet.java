@@ -28,7 +28,7 @@ public abstract class GetElemsInTimePeriodServlet extends ParentServlet {
     ResultSet resultSet;
     PrintWriter responseWriter;
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         requestBody = getRequestBody(request);

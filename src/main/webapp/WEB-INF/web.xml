@@ -11,7 +11,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>getAllDaysServlet</servlet-name>
-        <url-pattern>/getAllDays</url-pattern>
+        <url-pattern>/get-all-days</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -20,7 +20,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>getAllEarningsServlet</servlet-name>
-        <url-pattern>/getAllEarnings</url-pattern>
+        <url-pattern>/get-all-earnings</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -29,7 +29,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>getAllPurchasesServlet</servlet-name>
-        <url-pattern>/getAllPurchases</url-pattern>
+        <url-pattern>/get-all-purchases</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -38,7 +38,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>getDayEarnings</servlet-name>
-        <url-pattern>/getDayEarnings</url-pattern>
+        <url-pattern>/get-day-earnings</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -47,7 +47,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>getDayPurchases</servlet-name>
-        <url-pattern>/getDayPurchases</url-pattern>
+        <url-pattern>/get-day-purchases</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -56,7 +56,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>getEarningsInTimePeriod</servlet-name>
-        <url-pattern>/getEarningsInTimePeriod</url-pattern>
+        <url-pattern>/get-earnings-in-time-period</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -65,7 +65,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>getPurchasesInTimePeriod</servlet-name>
-        <url-pattern>/getPurchasesInTimePeriod</url-pattern>
+        <url-pattern>/get-purchases-in-time-period</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -74,7 +74,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>setDayServlet</servlet-name>
-        <url-pattern>/setDay</url-pattern>
+        <url-pattern>/set-day</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -83,7 +83,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>setEarningServlet</servlet-name>
-        <url-pattern>/setEarning</url-pattern>
+        <url-pattern>/set-earning</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -92,7 +92,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>setPurchaseServlet</servlet-name>
-        <url-pattern>/setPurchase</url-pattern>
+        <url-pattern>/set-purchase</url-pattern>
     </servlet-mapping>
 
     <resource-ref>
