@@ -8,8 +8,6 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 /*
 DriverManager - все его методы статические, а значит не надо создавать его экземпляр
@@ -37,141 +35,215 @@ public class DatabaseHandler {
                 System.exit(0);
             }
         }
-        catch (SQLException | ClassNotFoundException throwable) {
-            throwable.printStackTrace();
+        catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
         }
     }
 
-    public ResultSet getAllPurchases() throws SQLException, ClassNotFoundException {
-        PreparedStatement statement = connection.prepareStatement("SELECT * FROM purchase");
-        ResultSet rs = statement.executeQuery();
-        return rs;
+    public ResultSet getAllPurchases() {
+        ResultSet resultSet = null;
+        try {
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM purchase");
+            resultSet = statement.executeQuery();
+        }
+        catch(SQLException e) {
+            e.printStackTrace();
+        }
+        return resultSet;
     }
 
-    public ResultSet getAllEarnings() throws SQLException, ClassNotFoundException {
-        PreparedStatement statement = connection.prepareStatement("SELECT * FROM earning");
-        ResultSet rs = statement.executeQuery();
-        return rs;
+    public ResultSet getAllEarnings() {
+        ResultSet resultSet = null;
+        try {
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM earning");
+            resultSet = statement.executeQuery();
+        }
+        catch(SQLException e) {
+            e.printStackTrace();
+        }
+        return resultSet;
     }
 
-    public ResultSet getAllDays() throws SQLException, ClassNotFoundException {
-        PreparedStatement statement = connection.prepareStatement("SELECT * FROM date");
-        ResultSet rs = statement.executeQuery();
-        return rs;
+    public ResultSet getAllDays() {
+        ResultSet resultSet = null;
+        try {
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM date");
+            resultSet = statement.executeQuery();
+        }
+        catch(SQLException e) {
+            e.printStackTrace();
+        }
+        return resultSet;
     }
 
     //todo Проверить работоспособность
-    public void setPurchase(Purchase_DB purchaseDB) throws SQLException {
-        PreparedStatement statement = connection.
-                prepareStatement("INSERT INTO purchase VALUES(?, ?, ?, ?, ?)");
+    public void setPurchase(Purchase_DB purchaseDB) {
+        try {
+            PreparedStatement statement = connection.
+                    prepareStatement("INSERT INTO purchase VALUES(?, ?, ?, ?, ?)");
 
-        statement.setString(1, purchaseDB.getPurchase_name());
-        statement.setString(2, purchaseDB.getPurchase_type());
-        statement.setDouble(3, purchaseDB.getPurchase_cost());
-        statement.setLong(4, purchaseDB.getCount());
-        statement.setDate(5, purchaseDB.getDay());
+            statement.setString(1, purchaseDB.getPurchase_name());
+            statement.setString(2, purchaseDB.getPurchase_type());
+            statement.setDouble(3, purchaseDB.getPurchase_cost());
+            statement.setLong(4, purchaseDB.getCount());
+            statement.setDate(5, purchaseDB.getDay());
 
-        statement.executeUpdate();
+            statement.executeUpdate();
+        }
+        catch(SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 
-    public void setEarning(Earning_DB earningDB) throws SQLException {
-        PreparedStatement statement = connection.
-                prepareStatement("INSERT INTO earning VALUES(?, ?, ?, ?, ?)");
+    public void setEarning(Earning_DB earningDB) {
+        try {
+            PreparedStatement statement = connection.
+                    prepareStatement("INSERT INTO earning VALUES(?, ?, ?, ?, ?)");
 
-        statement.setString(1, earningDB.getEarning_name());
-        statement.setString(2, earningDB.getEarning_type());
-        statement.setDouble(3, earningDB.getEarning_cost());
-        statement.setLong(4, earningDB.getCount());
-        statement.setDate(5, earningDB.getDay());
+            statement.setString(1, earningDB.getEarning_name());
+            statement.setString(2, earningDB.getEarning_type());
+            statement.setDouble(3, earningDB.getEarning_cost());
+            statement.setLong(4, earningDB.getCount());
+            statement.setDate(5, earningDB.getDay());
 
-        statement.executeUpdate();
+            statement.executeUpdate();
+        }
+        catch(SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 
-    public void setDay(Date_DB dateDB) throws SQLException {
-        PreparedStatement statement = connection.
-                prepareStatement("INSERT INTO date VALUES(?, ?, ?, ?, ?)");
+    public void setDay(Date_DB dateDB) {
+        try {
+            PreparedStatement statement = connection.
+                    prepareStatement("INSERT INTO date VALUES(?, ?, ?, ?, ?)");
 
-        statement.setDate(1, dateDB.getDay());
-        statement.setDouble(2, dateDB.getCash_value_on_day_start());
-        statement.setDouble(3, dateDB.getCash_value_on_day_end());
-        statement.setDouble(4, dateDB.getCashless_value_on_day_start());
-        statement.setDouble(5, dateDB.getCashless_value_on_day_end());
+            statement.setDate(1, dateDB.getDay());
+            statement.setDouble(2, dateDB.getCash_value_on_day_start());
+            statement.setDouble(3, dateDB.getCash_value_on_day_end());
+            statement.setDouble(4, dateDB.getCashless_value_on_day_start());
+            statement.setDouble(5, dateDB.getCashless_value_on_day_end());
 
-        statement.executeUpdate();
+            statement.executeUpdate();
+        }
+        catch(SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 
     //todo удостовериться, нет ли способа удобнее
-    public boolean checkDateForExistence(Date date) throws SQLException {
-        PreparedStatement statement = connection.
-                prepareStatement("SELECT * FROM date WHERE day = ?");
-        statement.setDate(1, date);
-        ResultSet rs = statement.executeQuery();
+    public boolean checkDateForExistence(Date date) {
+        Boolean result = null;
+        try {
+            PreparedStatement statement = connection.
+                    prepareStatement("SELECT * FROM date WHERE day = ?");
+            statement.setDate(1, date);
+            ResultSet resultSet = statement.executeQuery();
 
-        rs.last();
-        int size = rs.getRow();
-        rs.beforeFirst();
-
-        return (size == 1);
-    }
-
-    public ResultSet getDayPurchases(Date date) throws SQLException {
-        PreparedStatement statement = connection.
-                prepareStatement("SELECT * FROM purchase WHERE day = ?");
-        statement.setDate(1, date);
-
-        ResultSet rs = statement.executeQuery();
-        return rs;
-    }
-
-    public ResultSet getDayEarnings(Date date) throws SQLException {
-        PreparedStatement statement = connection.
-                prepareStatement("SELECT * FROM earning WHERE day = ?");
-        statement.setDate(1, date);
-
-        ResultSet rs = statement.executeQuery();
-        return rs;
-    }
-
-    public ResultSet getPurchasesInTimePeriod(Date lessDate, Date moreDate) throws SQLException {
-        PreparedStatement statement = connection.
-                prepareStatement("SELECT * FROM purchase WHERE day BETWEEN ? AND ?");
-        statement.setDate(1, lessDate);
-        statement.setDate(2, moreDate);
-
-        ResultSet rs = statement.executeQuery();
-        return rs;
-    }
-
-    public ResultSet getEarningsInTimePeriod(Date lessDate, Date moreDate) throws SQLException {
-        PreparedStatement statement = connection.
-                prepareStatement("SELECT * FROM earning WHERE day BETWEEN ? AND ?");
-        statement.setDate(1, lessDate);
-        statement.setDate(2, moreDate);
-
-        ResultSet rs = statement.executeQuery();
-        return rs;
-    }
-
-
-    public String convertResultSetToJson(ResultSet resultSet) throws SQLException {
-
-        JSONArray allJsonRows = new JSONArray();
-        int numberColumns = resultSet.getMetaData().getColumnCount();
-        ResultSetMetaData metaData = resultSet.getMetaData();
-
-        while(resultSet.next()) {
-            JSONObject jsonRow = new JSONObject();
-
-            for(int i = 1; i <= numberColumns; i++) {
-                String RowElem = resultSet.getString(i);
-                String ColumnName = metaData.getColumnName(i);
-
-                jsonRow.put(ColumnName, RowElem);
-            }
-            allJsonRows.add(jsonRow);
+            resultSet.last();
+            int size = resultSet.getRow();
+            resultSet.beforeFirst();
+            result = (size == 1);
         }
-        resultSet.close();
-        return allJsonRows.toJSONString();
+        catch(SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    public ResultSet getDayPurchases(Date date) {
+        ResultSet resultSet = null;
+        try {
+            PreparedStatement statement = connection.
+                    prepareStatement("SELECT * FROM purchase WHERE day = ?");
+            statement.setDate(1, date);
+
+            resultSet = statement.executeQuery();
+        }
+        catch(SQLException e) {
+            e.printStackTrace();
+        }
+        return resultSet;
+    }
+
+
+    public ResultSet getDayEarnings(Date date) {
+        ResultSet resultSet = null;
+        try {
+            PreparedStatement statement = connection.
+                    prepareStatement("SELECT * FROM earning WHERE day = ?");
+            statement.setDate(1, date);
+
+            resultSet = statement.executeQuery();
+        }
+        catch(SQLException e) {
+            e.printStackTrace();
+        }
+        return resultSet;
+    }
+
+
+    public ResultSet getPurchasesInTimePeriod(Date lessDate, Date moreDate) {
+        ResultSet resultSet = null;
+        try {
+            PreparedStatement statement = connection.
+                    prepareStatement("SELECT * FROM purchase WHERE day BETWEEN ? AND ?");
+            statement.setDate(1, lessDate);
+            statement.setDate(2, moreDate);
+
+            resultSet = statement.executeQuery();
+        }
+        catch(SQLException e) {
+            e.printStackTrace();
+        }
+        return resultSet;
+    }
+
+
+    public ResultSet getEarningsInTimePeriod(Date lessDate, Date moreDate) {
+        ResultSet resultSet = null;
+        try {
+            PreparedStatement statement = connection.
+                    prepareStatement("SELECT * FROM earning WHERE day BETWEEN ? AND ?");
+            statement.setDate(1, lessDate);
+            statement.setDate(2, moreDate);
+
+            resultSet = statement.executeQuery();
+
+        }
+        catch(SQLException e) {
+            e.printStackTrace();
+        }
+        return resultSet;
+    }
+
+
+    public JSONArray convertResultSetToJsonArray(ResultSet resultSet) {
+        JSONArray allJsonRows = new JSONArray();
+        try {
+            int numberColumns = resultSet.getMetaData().getColumnCount();
+            ResultSetMetaData metaData = resultSet.getMetaData();
+
+            while(resultSet.next()) {
+                JSONObject jsonRow = new JSONObject();
+
+                for(int i = 1; i <= numberColumns; i++) {
+                    String RowElem = resultSet.getString(i);
+                    String ColumnName = metaData.getColumnName(i);
+
+                    jsonRow.put(ColumnName, RowElem);
+                }
+                allJsonRows.add(jsonRow);
+            }
+            resultSet.close();
+        }
+        catch(SQLException e) {
+            e.printStackTrace();
+        }
+        return allJsonRows;
     }
 
 /*

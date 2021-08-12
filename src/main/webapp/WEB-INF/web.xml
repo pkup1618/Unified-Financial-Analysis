@@ -4,18 +4,10 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          version="3.0">
 
-    <servlet>
-        <servlet-name>mainServlet</servlet-name>
-        <servlet-class>servlets.MainServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>mainServlet</servlet-name>
-        <url-pattern>/lets</url-pattern>
-    </servlet-mapping>
 
     <servlet>
         <servlet-name>getAllDaysServlet</servlet-name>
-        <servlet-class>servlets.get_command_servlets.GetAllDaysServlet</servlet-class>
+        <servlet-class>servlets.get_command_servlets.all_data_servlets.GetAllDaysServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>getAllDaysServlet</servlet-name>
@@ -24,7 +16,7 @@
 
     <servlet>
         <servlet-name>getAllEarningsServlet</servlet-name>
-        <servlet-class>servlets.get_command_servlets.GetAllEarningsServlet</servlet-class>
+        <servlet-class>servlets.get_command_servlets.all_data_servlets.GetAllEarningsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>getAllEarningsServlet</servlet-name>
@@ -33,7 +25,7 @@
 
     <servlet>
         <servlet-name>getAllPurchasesServlet</servlet-name>
-        <servlet-class>servlets.get_command_servlets.GetAllPurchasesServlet</servlet-class>
+        <servlet-class>servlets.get_command_servlets.all_data_servlets.GetAllPurchasesServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>getAllPurchasesServlet</servlet-name>
@@ -42,7 +34,7 @@
 
     <servlet>
         <servlet-name>getDayEarnings</servlet-name>
-        <servlet-class>servlets.get_command_servlets.GetDayEarningsServlet</servlet-class>
+        <servlet-class>servlets.get_command_servlets.one_day_servlets.GetDayEarningsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>getDayEarnings</servlet-name>
@@ -51,7 +43,7 @@
 
     <servlet>
         <servlet-name>getDayPurchases</servlet-name>
-        <servlet-class>servlets.get_command_servlets.GetDayPurchasesServlet</servlet-class>
+        <servlet-class>servlets.get_command_servlets.one_day_servlets.GetDayPurchasesServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>getDayPurchases</servlet-name>
@@ -60,7 +52,7 @@
 
     <servlet>
         <servlet-name>getEarningsInTimePeriod</servlet-name>
-        <servlet-class>servlets.get_command_servlets.GetEarningsInTimePeriodServlet</servlet-class>
+        <servlet-class>servlets.get_command_servlets.time_period_servlets.GetEarningsInTimePeriodServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>getEarningsInTimePeriod</servlet-name>
@@ -69,7 +61,7 @@
 
     <servlet>
         <servlet-name>getPurchasesInTimePeriod</servlet-name>
-        <servlet-class>servlets.get_command_servlets.GetPurchasesInTimePeriodServlet</servlet-class>
+        <servlet-class>servlets.get_command_servlets.time_period_servlets.GetPurchasesInTimePeriodServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>getPurchasesInTimePeriod</servlet-name>
