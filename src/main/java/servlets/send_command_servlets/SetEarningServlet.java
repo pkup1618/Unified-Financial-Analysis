@@ -1,6 +1,8 @@
 package servlets.send_command_servlets;
 
 import components.database_handling.models.Earning_DB;
+import org.json.simple.JSONObject;
+
 import java.sql.Date;
 
 
@@ -21,5 +23,17 @@ public class SetEarningServlet extends SetDataServlet {
                 earningType, earningCost, count, dateForModel);
 
         databaseHandler.setEarning(earningModel);
+    }
+
+
+    @Override
+    protected void setRequestJsonTemplate() {
+        requestJsonTemplate = new JSONObject();
+
+        requestJsonTemplate.put("earning-name", "null");
+        requestJsonTemplate.put("earning-type", 0);
+        requestJsonTemplate.put("earning-cost", 0);
+        requestJsonTemplate.put("count", 0);
+        requestJsonTemplate.put("day", "00/00/0000");
     }
 }

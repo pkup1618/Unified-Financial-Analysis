@@ -1,5 +1,6 @@
 package servlets.get_command_servlets.one_day_servlets;
 
+import components.support_classes.exceptions.IncorrectBodyFormatException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.json.simple.JSONArray;
@@ -21,20 +22,40 @@ public abstract class GetDayElemsServlet extends ParentServlet {
     PrintWriter responseWriter;
 
 
+    protected void setRequestJsonTemplate() {
+        requestJsonTemplate = new JSONObject();
+        requestJsonTemplate.put("date-without-bank", "00/00/0000");
+    }
+
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) {
-        requestBody = getRequestBody(request);
-        jsonRequestBody = parseJsonFromString(requestBody);
-
-        stringDate = (String) jsonRequestBody.get("date-without-bank");
-        date = convertDateFromStringDate(stringDate);
-
-        makeResponseToDatabase();
-
-        jsonAnswer = databaseHandler.convertResultSetToJsonArray(resultSet);
 
         responseWriter = getResponsePrintWriter(response);
-        responseWriter.println(jsonAnswer.toJSONString());
 
+        setRequestJsonTemplate();
+
+        requestBody = getRequestBody(request);
+
+        try {
+            validateRequest(request, requestBody, requestJsonTemplate);
+
+            jsonRequestBody = parseJsonFromString(requestBody);
+
+            stringDate = (String) jsonRequestBody.get("date-without-bank");
+            date = convertDateFromStringDate(stringDate);
+
+            makeResponseToDatabase();
+
+            jsonAnswer = databaseHandler.convertResultSetToJsonArray(resultSet);
+
+            responseWriter.println(jsonAnswer.toJSONString());
+        }
+        catch(IncorrectBodyFormatException e) {
+
+            JSONObject failureAnswer = new JSONObject();
+            failureAnswer.put("status", "bad request");
+            responseWriter.println(failureAnswer.toString());
+        }
     }
 
 

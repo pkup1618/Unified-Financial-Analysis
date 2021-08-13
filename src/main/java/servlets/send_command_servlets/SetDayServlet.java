@@ -1,6 +1,7 @@
 package servlets.send_command_servlets;
 
 import components.database_handling.models.Date_DB;
+import org.json.simple.JSONObject;
 
 
 public class SetDayServlet extends SetDataServlet {
@@ -22,5 +23,15 @@ public class SetDayServlet extends SetDataServlet {
                 cashlessValueOnDayStart, cashlessValueOnDayEnd);
 
         databaseHandler.setDay(dateModel);
+    }
+
+    protected void setRequestJsonTemplate() {
+        requestJsonTemplate = new JSONObject();
+
+        requestJsonTemplate.put("day", "00/00/0000");
+        requestJsonTemplate.put("cash-value-on-day-start", 0);
+        requestJsonTemplate.put("cash-value-on-day-end", 0);
+        requestJsonTemplate.put("cashless-value-on-day-start", 0);
+        requestJsonTemplate.put("cashless-value-on-day-end", 0);
     }
 }

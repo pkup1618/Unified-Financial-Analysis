@@ -1,6 +1,8 @@
 package servlets.send_command_servlets;
 
 import components.database_handling.models.Purchase_DB;
+import org.json.simple.JSONObject;
+
 import java.sql.Date;
 
 
@@ -21,5 +23,17 @@ public class SetPurchaseServlet extends SetDataServlet {
                 purchaseType, purchaseCost, count, dateForModel);
 
         databaseHandler.setPurchase(purchaseModel);
+    }
+
+
+    @Override
+    protected void setRequestJsonTemplate() {
+        requestJsonTemplate = new JSONObject();
+
+        requestJsonTemplate.put("purchase-name", "null");
+        requestJsonTemplate.put("purchase-type", 0);
+        requestJsonTemplate.put("purchase-cost", 0);
+        requestJsonTemplate.put("count", 0);
+        requestJsonTemplate.put("day", "00/00/0000");
     }
 }

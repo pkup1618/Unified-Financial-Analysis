@@ -1,16 +1,17 @@
 package servlets;
 
 import components.database_handling.DatabaseHandler;
+import components.support_classes.JsonHandler;
+import components.support_classes.RequestBodyHandler;
+import components.support_classes.Validator;
+import components.support_classes.exceptions.IncorrectBodyFormatException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.json.simple.JSONObject;
-import org.json.simple.JSONValue;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.Reader;
 import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -23,6 +24,12 @@ public abstract class ParentServlet extends HttpServlet {
 
     /** Поле обработчика базы данных */
     protected DatabaseHandler databaseHandler = new DatabaseHandler();
+    protected JSONObject requestJsonTemplate;
+
+    /**
+     * Устанавливает шаблон для дальнейшей валидации JSON-объектов
+     */
+    protected abstract void setRequestJsonTemplate();
 
 
     /**
@@ -31,20 +38,12 @@ public abstract class ParentServlet extends HttpServlet {
      */
     protected String getRequestBody(HttpServletRequest request) {
 
-        String requestBody = null;
-        try(Reader reader = request.getReader();
-            BufferedReader bufferedReader = new BufferedReader(reader)) {
+        return RequestBodyHandler.getRequestBody(request);
+    }
 
-            StringBuilder requestBodyBuilder = new StringBuilder();
-            for (String requestBodyPart; (requestBodyPart = bufferedReader.readLine()) != null;) {
-                requestBodyBuilder.append(requestBodyPart);
-            }
-            requestBody = requestBodyBuilder.toString();
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-        return requestBody;
+
+    protected void validateRequest(HttpServletRequest request, String  requestBody, JSONObject template) throws IncorrectBodyFormatException {
+        Validator.validateRequest(request, requestBody, template);
     }
 
 
@@ -68,19 +67,12 @@ public abstract class ParentServlet extends HttpServlet {
 
 
     /**
-     * Преобразует json-объект-строку в формат JSONObject
+     * Преобразует json-объект-строку в формат JSON-Object
      * @param stringJson - json-объект в виде строки
      */
     protected JSONObject parseJsonFromString(String stringJson) {
 
-        JSONObject requestJsonObject = null;
-        try {
-            requestJsonObject = (JSONObject) JSONValue.parseWithException(stringJson);
-        }
-        catch(org.json.simple.parser.ParseException e) {
-            e.printStackTrace();
-        }
-        return requestJsonObject;
+        return JsonHandler.parseJsonFromString(stringJson);
     }
 
 

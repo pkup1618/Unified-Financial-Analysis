@@ -1,6 +1,7 @@
 package servlets.send_command_servlets;
 
 
+import components.support_classes.exceptions.IncorrectBodyFormatException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.json.simple.JSONObject;
@@ -22,16 +23,30 @@ public abstract class SetDataServlet extends ParentServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
 
-        requestBody = getRequestBody(request);
-        jsonRequestBody = parseJsonFromString(requestBody);
-
-        makeResponseToDatabase();
-
-        jsonAnswer = new JSONObject();
-        jsonAnswer.put("status" , true);
-
         responseWriter = getResponsePrintWriter(response);
-        responseWriter.println(jsonAnswer);
+
+        requestBody = getRequestBody(request);
+
+        try{
+            setRequestJsonTemplate();
+
+            validateRequest(request, requestBody, requestJsonTemplate);
+            jsonRequestBody = parseJsonFromString(requestBody);
+
+            makeResponseToDatabase();
+
+            jsonAnswer = new JSONObject();
+            jsonAnswer.put("status" , true);
+
+
+            responseWriter.println(jsonAnswer);
+        }
+        catch (IncorrectBodyFormatException e) {
+
+            JSONObject failureAnswer = new JSONObject();
+            failureAnswer.put("status", "bad request");
+            responseWriter.println(failureAnswer.toString());
+        }
     }
 
     protected abstract void makeResponseToDatabase();

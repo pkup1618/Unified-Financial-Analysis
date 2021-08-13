@@ -27,5 +27,5 @@ public abstract class GetAllElemsServlet extends ParentServlet {
         responseWriter.println(jsonAnswer);
     }
 
-
+    protected void setRequestJsonTemplate() { }
 }
