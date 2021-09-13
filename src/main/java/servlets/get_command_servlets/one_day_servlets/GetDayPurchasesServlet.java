@@ -5,6 +5,6 @@ public class GetDayPurchasesServlet extends GetDayElemsServlet {
 
     @Override
     protected void makeResponseToDatabase() {
-        resultSet = databaseHandler.getDayEarnings(date);
+        resultSet = databaseHandler.getDayPurchases(date);
     }
 }

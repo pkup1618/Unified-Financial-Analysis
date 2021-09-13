@@ -1,6 +1,6 @@
 package servlets.send_command_servlets;
 
-import components.database_handling.models.Date_DB;
+import components.database_handling.models.DateDB;
 import org.json.simple.JSONObject;
 
 
@@ -18,7 +18,7 @@ public class SetDayServlet extends SetDataServlet {
         double cashlessValueOnDayEnd = (Double) jsonRequestBody.get("cashless-value-on-day-end");
 
 
-        Date_DB dateModel = new Date_DB(date,
+        DateDB dateModel = new DateDB(date,
                 cashValueOnDayStart, cashValueOnDayEnd,
                 cashlessValueOnDayStart, cashlessValueOnDayEnd);
 

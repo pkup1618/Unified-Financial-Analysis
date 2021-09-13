@@ -1,26 +1,27 @@
 package components.database_handling;
 
 
-import components.database_handling.models.Date_DB;
-import components.database_handling.models.Earning_DB;
-import components.database_handling.models.Purchase_DB;
+import components.database_handling.models.DateDB;
+import components.database_handling.models.EarningDB;
+import components.database_handling.models.PurchaseDB;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.sql.*;
 
-/*
-DriverManager - все его методы статические, а значит не надо создавать его экземпляр
-https://docs.oracle.com/en/java/javase/11/docs/api/java.sql/java/sql/DriverManager.html
+
+//todo singleton?
+/**
+ * Класс для взаимодействия с базой данных через JDBC Driver
  */
 public class DatabaseHandler {
 
-    static Driver postgreSqlDriver;
-    static Connection connection;
+    private static Driver postgreSqlDriver;
+    private static Connection connection;
+
     static {
         postgreSqlDriver = null;
         connection = null;
-
         try {
             Class.forName("org.postgresql.Driver");
             postgreSqlDriver = DriverManager.getDriver("jdbc:postgresql://localhost:5709/money_management_db");
@@ -36,10 +37,15 @@ public class DatabaseHandler {
             }
         }
         catch (SQLException | ClassNotFoundException e) {
+            //todo что делать в нормальном случае?
             e.printStackTrace();
         }
     }
 
+    /**
+     * Получить все записи о расходах из базы данных
+     * @return записи из базы данных
+     */
     public ResultSet getAllPurchases() {
         ResultSet resultSet = null;
         try {
@@ -52,6 +58,11 @@ public class DatabaseHandler {
         return resultSet;
     }
 
+
+    /**
+     * Получить все записи о доходах из базы данных
+     * @return записи из базы данных
+     */
     public ResultSet getAllEarnings() {
         ResultSet resultSet = null;
         try {
@@ -64,6 +75,11 @@ public class DatabaseHandler {
         return resultSet;
     }
 
+
+    /**
+     * Получить все записи о днях из базы данных
+     * @return записи из базы данных
+     */
     public ResultSet getAllDays() {
         ResultSet resultSet = null;
         try {
@@ -76,17 +92,22 @@ public class DatabaseHandler {
         return resultSet;
     }
 
-    //todo Проверить работоспособность
-    public void setPurchase(Purchase_DB purchaseDB) {
+
+    /**
+     * Добавить запись о расходе в базу данных
+     * @param purchaseDB объект расхода
+     */
+    public void setPurchase(PurchaseDB purchaseDB) {
         try {
             PreparedStatement statement = connection.
-                    prepareStatement("INSERT INTO purchase VALUES(?, ?, ?, ?, ?)");
+                    prepareStatement("INSERT INTO purchase VALUES(?, ?, ?, ?, ?, ?)");
 
-            statement.setString(1, purchaseDB.getPurchase_name());
-            statement.setString(2, purchaseDB.getPurchase_type());
-            statement.setDouble(3, purchaseDB.getPurchase_cost());
+            statement.setString(1, purchaseDB.getPurchaseName());
+            statement.setString(2, purchaseDB.getPurchaseType());
+            statement.setDouble(3, purchaseDB.getPurchaseCost());
             statement.setLong(4, purchaseDB.getCount());
             statement.setDate(5, purchaseDB.getDay());
+            statement.setString(6, purchaseDB.getPaymentType());
 
             statement.executeUpdate();
         }
@@ -96,16 +117,22 @@ public class DatabaseHandler {
 
     }
 
-    public void setEarning(Earning_DB earningDB) {
+
+    /**
+     * Добавить запись о доходе в базу данных
+     * @param earningDB объект дохода
+     */
+    public void setEarning(EarningDB earningDB) {
         try {
             PreparedStatement statement = connection.
-                    prepareStatement("INSERT INTO earning VALUES(?, ?, ?, ?, ?)");
+                    prepareStatement("INSERT INTO earning VALUES(?, ?, ?, ?, ?, ?)");
 
-            statement.setString(1, earningDB.getEarning_name());
-            statement.setString(2, earningDB.getEarning_type());
-            statement.setDouble(3, earningDB.getEarning_cost());
+            statement.setString(1, earningDB.getEarningName());
+            statement.setString(2, earningDB.getEarningType());
+            statement.setDouble(3, earningDB.getEarningCost());
             statement.setLong(4, earningDB.getCount());
             statement.setDate(5, earningDB.getDay());
+            statement.setString(6, earningDB.getPaymentType());
 
             statement.executeUpdate();
         }
@@ -115,16 +142,21 @@ public class DatabaseHandler {
 
     }
 
-    public void setDay(Date_DB dateDB) {
+
+    /**
+     * Добавить запись о дне в базу данных
+     * @param dateDB объект дня
+     */
+    public void setDay(DateDB dateDB) {
         try {
             PreparedStatement statement = connection.
                     prepareStatement("INSERT INTO date VALUES(?, ?, ?, ?, ?)");
 
             statement.setDate(1, dateDB.getDay());
-            statement.setDouble(2, dateDB.getCash_value_on_day_start());
-            statement.setDouble(3, dateDB.getCash_value_on_day_end());
-            statement.setDouble(4, dateDB.getCashless_value_on_day_start());
-            statement.setDouble(5, dateDB.getCashless_value_on_day_end());
+            statement.setDouble(2, dateDB.getCashValueOnDayStart());
+            statement.setDouble(3, dateDB.getCashValueOnDayEnd());
+            statement.setDouble(4, dateDB.getCashlessValueOnDayStart());
+            statement.setDouble(5, dateDB.getCashlessValueOnDayEnd());
 
             statement.executeUpdate();
         }
@@ -134,7 +166,12 @@ public class DatabaseHandler {
 
     }
 
-    //todo удостовериться, нет ли способа удобнее
+
+    /**
+     * Проверить наличие записи о дне в базе данных
+     * @param date объект дня
+     * @return true - запись есть, false - записи нет
+     */
     public boolean checkDateForExistence(Date date) {
         Boolean result = null;
         try {
@@ -154,6 +191,12 @@ public class DatabaseHandler {
         return result;
     }
 
+
+    /**
+     * Получить все записи о расходах за день из базы данных
+     * @param date объект дня
+     * @return записи из базы данных
+     */
     public ResultSet getDayPurchases(Date date) {
         ResultSet resultSet = null;
         try {
@@ -170,6 +213,11 @@ public class DatabaseHandler {
     }
 
 
+    /**
+     * Получить все записи о доходах за день из базы данных
+     * @param date объект дня
+     * @return записи из базы данных
+     */
     public ResultSet getDayEarnings(Date date) {
         ResultSet resultSet = null;
         try {
@@ -186,6 +234,13 @@ public class DatabaseHandler {
     }
 
 
+    /**
+     * Получить все записи о расходах за временной промежуток
+     * от дня до дня (включительно) из базы данных
+     * @param lessDate объект дня (от которого отсчёт)
+     * @param moreDate объект дня (докоторого отсчёт)
+     * @return записи из базы данных
+     */
     public ResultSet getPurchasesInTimePeriod(Date lessDate, Date moreDate) {
         ResultSet resultSet = null;
         try {
@@ -203,6 +258,13 @@ public class DatabaseHandler {
     }
 
 
+    /**
+     * Получить все записи о доходах за временной промежуток
+     * от дня до дня (включительно) из базы данных
+     * @param lessDate объект дня (от которого отсчёт)
+     * @param moreDate объект дня (докоторого отсчёт)
+     * @return записи из базы данных
+     */
     public ResultSet getEarningsInTimePeriod(Date lessDate, Date moreDate) {
         ResultSet resultSet = null;
         try {
@@ -221,6 +283,11 @@ public class DatabaseHandler {
     }
 
 
+    /**
+     * Преобразовать записи из формата ResultSet в список JSON
+     * @param resultSet записи из базы данных
+     * @return записи из базы данных в виде списка JSON
+     */
     public JSONArray convertResultSetToJsonArray(ResultSet resultSet) {
         JSONArray allJsonRows = new JSONArray();
         try {
@@ -245,33 +312,4 @@ public class DatabaseHandler {
         }
         return allJsonRows;
     }
-
-/*
-    public MoneyDifferenceInTime getTotalMoneyEarningsInTimePeriod(Date lessDate, Date moreDate) {
-        List<Earning_DB> earnings = getEarningsInTimePeriod(lessDate, moreDate);
-        MoneyDifferenceInTime moneyDifferenceInTime = new MoneyDifferenceInTime();
-
-        for (Earning_DB earning: earnings) {
-            if (earning.getPayment_type() == "cash")
-                moneyDifferenceInTime.addCash_total_value(earning.getEarning_cost() * earning.getCount());
-            else
-                moneyDifferenceInTime.addCashless_total_value(earning.getEarning_cost() * earning.getCount());
-        }
-        return moneyDifferenceInTime;
-    }
-
-
-    public MoneyDifferenceInTime getTotalMoneyPurchasesInTimePeriod(Date lessDate, Date moreDate) {
-        List<Purchase_DB> purchases = getPurchasesInTimePeriod(lessDate, moreDate);
-        MoneyDifferenceInTime moneyDifferenceInTime = new MoneyDifferenceInTime();
-
-        for (Purchase_DB purchase: purchases) {
-            if (purchase.getPayment_type() == "cashless")
-                moneyDifferenceInTime.addCash_total_value(purchase.getPurchase_cost() * purchase.getCount());
-            else
-                moneyDifferenceInTime.addCashless_total_value(purchase.getPurchase_cost() * purchase.getCount());
-        }
-        return moneyDifferenceInTime;
-    }
-     */
 }

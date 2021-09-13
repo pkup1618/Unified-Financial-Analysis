@@ -6,8 +6,17 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
 
+
+/**
+ * Класс для обработки тел запросов в разных ситуациях
+ */
 public class RequestBodyHandler {
 
+    /**
+     * Прочесть и сохранить в строку тело запроса
+     * @param request запрос
+     * @return тело запроса
+     */
     public static String getRequestBody(HttpServletRequest request) {
 
         String requestBody = null;
@@ -20,6 +29,7 @@ public class RequestBodyHandler {
             }
             requestBody = requestBodyBuilder.toString();
         }
+        //todo как обработать?
         catch (IOException e) {
             e.printStackTrace();
         }

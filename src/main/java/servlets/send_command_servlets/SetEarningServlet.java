@@ -1,6 +1,6 @@
 package servlets.send_command_servlets;
 
-import components.database_handling.models.Earning_DB;
+import components.database_handling.models.EarningDB;
 import org.json.simple.JSONObject;
 
 import java.sql.Date;
@@ -19,8 +19,10 @@ public class SetEarningServlet extends SetDataServlet {
         String stringDateForModel = (String) jsonRequestBody.get("day");
         Date dateForModel = convertDateFromStringDate(stringDateForModel);
 
-        Earning_DB earningModel = new Earning_DB(earningName,
-                earningType, earningCost, count, dateForModel);
+        String paymentType = (String) jsonRequestBody.get("payment-type");
+
+        EarningDB earningModel = new EarningDB(earningName,
+                earningType, earningCost, count, dateForModel, paymentType);
 
         databaseHandler.setEarning(earningModel);
     }
@@ -31,9 +33,10 @@ public class SetEarningServlet extends SetDataServlet {
         requestJsonTemplate = new JSONObject();
 
         requestJsonTemplate.put("earning-name", "null");
-        requestJsonTemplate.put("earning-type", 0);
+        requestJsonTemplate.put("earning-type", "null");
         requestJsonTemplate.put("earning-cost", 0);
         requestJsonTemplate.put("count", 0);
         requestJsonTemplate.put("day", "00/00/0000");
+        requestJsonTemplate.put("payment-type", "null");
     }
 }

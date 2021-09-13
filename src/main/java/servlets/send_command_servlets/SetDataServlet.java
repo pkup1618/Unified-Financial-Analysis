@@ -21,7 +21,7 @@ public abstract class SetDataServlet extends ParentServlet {
     Date date;
     PrintWriter responseWriter;
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) {
 
         responseWriter = getResponsePrintWriter(response);
 
