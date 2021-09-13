@@ -1,0 +1,2580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="money_management_db@localhost">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.21">
+    <root id="1">
+      <ServerVersion>13.3</ServerVersion>
+      <Grants>1||-9223372036854775808|c|G
+1||10|c|G
+1||10|C|G
+1||10|T|G
+13441||-9223372036854775808|c|G
+13441||10|c|G
+13441||10|C|G
+13441||10|T|G</Grants>
+      <DateStyle>dmy</DateStyle>
+      <TimeZones>true ACDT
+true ACSST
+false ACST
+false ACT
+false ACWST
+true ADT
+true AEDT
+true AESST
+false AEST
+false AFT
+true AKDT
+false AKST
+true ALMST
+false ALMT
+false AMST
+false AMT
+false ANAST
+false ANAT
+false ARST
+false ART
+false AST
+true AWSST
+false AWST
+true AZOST
+false AZOT
+false AZST
+false AZT
+false Africa/Abidjan
+false Africa/Accra
+false Africa/Addis_Ababa
+false Africa/Algiers
+false Africa/Asmara
+false Africa/Asmera
+false Africa/Bamako
+false Africa/Bangui
+false Africa/Banjul
+false Africa/Bissau
+false Africa/Blantyre
+false Africa/Brazzaville
+false Africa/Bujumbura
+false Africa/Cairo
+false Africa/Casablanca
+true Africa/Ceuta
+false Africa/Conakry
+false Africa/Dakar
+false Africa/Dar_es_Salaam
+false Africa/Djibouti
+false Africa/Douala
+false Africa/El_Aaiun
+false Africa/Freetown
+false Africa/Gaborone
+false Africa/Harare
+false Africa/Johannesburg
+false Africa/Juba
+false Africa/Kampala
+false Africa/Khartoum
+false Africa/Kigali
+false Africa/Kinshasa
+false Africa/Lagos
+false Africa/Libreville
+false Africa/Lome
+false Africa/Luanda
+false Africa/Lubumbashi
+false Africa/Lusaka
+false Africa/Malabo
+false Africa/Maputo
+false Africa/Maseru
+false Africa/Mbabane
+false Africa/Mogadishu
+false Africa/Monrovia
+false Africa/Nairobi
+false Africa/Ndjamena
+false Africa/Niamey
+false Africa/Nouakchott
+false Africa/Ouagadougou
+false Africa/Porto-Novo
+false Africa/Sao_Tome
+false Africa/Timbuktu
+false Africa/Tripoli
+false Africa/Tunis
+false Africa/Windhoek
+true America/Adak
+true America/Anchorage
+false America/Anguilla
+false America/Antigua
+false America/Araguaina
+false America/Argentina/Buenos_Aires
+false America/Argentina/Catamarca
+false America/Argentina/ComodRivadavia
+false America/Argentina/Cordoba
+false America/Argentina/Jujuy
+false America/Argentina/La_Rioja
+false America/Argentina/Mendoza
+false America/Argentina/Rio_Gallegos
+false America/Argentina/Salta
+false America/Argentina/San_Juan
+false America/Argentina/San_Luis
+false America/Argentina/Tucuman
+false America/Argentina/Ushuaia
+false America/Aruba
+false America/Asuncion
+false America/Atikokan
+true America/Atka
+false America/Bahia
+true America/Bahia_Banderas
+false America/Barbados
+false America/Belem
+false America/Belize
+false America/Blanc-Sablon
+false America/Boa_Vista
+false America/Bogota
+true America/Boise
+false America/Buenos_Aires
+true America/Cambridge_Bay
+false America/Campo_Grande
+false America/Cancun
+false America/Caracas
+false America/Catamarca
+false America/Cayenne
+false America/Cayman
+true America/Chicago
+true America/Chihuahua
+false America/Coral_Harbour
+false America/Cordoba
+false America/Costa_Rica
+false America/Creston
+false America/Cuiaba
+false America/Curacao
+false America/Danmarkshavn
+false America/Dawson
+false America/Dawson_Creek
+true America/Denver
+true America/Detroit
+false America/Dominica
+true America/Edmonton
+false America/Eirunepe
+false America/El_Salvador
+true America/Ensenada
+false America/Fort_Nelson
+true America/Fort_Wayne
+false America/Fortaleza
+true America/Glace_Bay
+true America/Godthab
+true America/Goose_Bay
+true America/Grand_Turk
+false America/Grenada
+false America/Guadeloupe
+false America/Guatemala
+false America/Guayaquil
+false America/Guyana
+true America/Halifax
+true America/Havana
+false America/Hermosillo
+true America/Indiana/Indianapolis
+true America/Indiana/Knox
+true America/Indiana/Marengo
+true America/Indiana/Petersburg
+true America/Indiana/Tell_City
+true America/Indiana/Vevay
+true America/Indiana/Vincennes
+true America/Indiana/Winamac
+true America/Indianapolis
+true America/Inuvik
+true America/Iqaluit
+false America/Jamaica
+false America/Jujuy
+true America/Juneau
+true America/Kentucky/Louisville
+true America/Kentucky/Monticello
+true America/Knox_IN
+false America/Kralendijk
+false America/La_Paz
+false America/Lima
+true America/Los_Angeles
+true America/Louisville
+false America/Lower_Princes
+false America/Maceio
+false America/Managua
+false America/Manaus
+false America/Marigot
+false America/Martinique
+true America/Matamoros
+true America/Mazatlan
+false America/Mendoza
+true America/Menominee
+true America/Merida
+true America/Metlakatla
+true America/Mexico_City
+true America/Miquelon
+true America/Moncton
+true America/Monterrey
+false America/Montevideo
+true America/Montreal
+false America/Montserrat
+true America/Nassau
+true America/New_York
+true America/Nipigon
+true America/Nome
+false America/Noronha
+true America/North_Dakota/Beulah
+true America/North_Dakota/Center
+true America/North_Dakota/New_Salem
+true America/Nuuk
+true America/Ojinaga
+false America/Panama
+true America/Pangnirtung
+false America/Paramaribo
+false America/Phoenix
+true America/Port-au-Prince
+false America/Port_of_Spain
+false America/Porto_Acre
+false America/Porto_Velho
+false America/Puerto_Rico
+false America/Punta_Arenas
+true America/Rainy_River
+true America/Rankin_Inlet
+false America/Recife
+false America/Regina
+true America/Resolute
+false America/Rio_Branco
+false America/Rosario
+true America/Santa_Isabel
+false America/Santarem
+false America/Santiago
+false America/Santo_Domingo
+false America/Sao_Paulo
+true America/Scoresbysund
+true America/Shiprock
+true America/Sitka
+false America/St_Barthelemy
+true America/St_Johns
+false America/St_Kitts
+false America/St_Lucia
+false America/St_Thomas
+false America/St_Vincent
+false America/Swift_Current
+false America/Tegucigalpa
+true America/Thule
+true America/Thunder_Bay
+true America/Tijuana
+true America/Toronto
+false America/Tortola
+true America/Vancouver
+false America/Virgin
+false America/Whitehorse
+true America/Winnipeg
+true America/Yakutat
+true America/Yellowknife
+false Antarctica/Casey
+false Antarctica/Davis
+false Antarctica/DumontDUrville
+false Antarctica/Macquarie
+false Antarctica/Mawson
+false Antarctica/McMurdo
+false Antarctica/Palmer
+false Antarctica/Rothera
+false Antarctica/South_Pole
+false Antarctica/Syowa
+true Antarctica/Troll
+false Antarctica/Vostok
+true Arctic/Longyearbyen
+false Asia/Aden
+false Asia/Almaty
+true Asia/Amman
+false Asia/Anadyr
+false Asia/Aqtau
+false Asia/Aqtobe
+false Asia/Ashgabat
+false Asia/Ashkhabad
+false Asia/Atyrau
+false Asia/Baghdad
+false Asia/Bahrain
+false Asia/Baku
+false Asia/Bangkok
+false Asia/Barnaul
+true Asia/Beirut
+false Asia/Bishkek
+false Asia/Brunei
+false Asia/Calcutta
+false Asia/Chita
+false Asia/Choibalsan
+false Asia/Chongqing
+false Asia/Chungking
+false Asia/Colombo
+false Asia/Dacca
+true Asia/Damascus
+false Asia/Dhaka
+false Asia/Dili
+false Asia/Dubai
+false Asia/Dushanbe
+true Asia/Famagusta
+true Asia/Gaza
+false Asia/Harbin
+true Asia/Hebron
+false Asia/Ho_Chi_Minh
+false Asia/Hong_Kong
+false Asia/Hovd
+false Asia/Irkutsk
+false Asia/Istanbul
+false Asia/Jakarta
+false Asia/Jayapura
+true Asia/Jerusalem
+false Asia/Kabul
+false Asia/Kamchatka
+false Asia/Karachi
+false Asia/Kashgar
+false Asia/Kathmandu
+false Asia/Katmandu
+false Asia/Khandyga
+false Asia/Kolkata
+false Asia/Krasnoyarsk
+false Asia/Kuala_Lumpur
+false Asia/Kuching
+false Asia/Kuwait
+false Asia/Macao
+false Asia/Macau
+false Asia/Magadan
+false Asia/Makassar
+false Asia/Manila
+false Asia/Muscat
+true Asia/Nicosia
+false Asia/Novokuznetsk
+false Asia/Novosibirsk
+false Asia/Omsk
+false Asia/Oral
+false Asia/Phnom_Penh
+false Asia/Pontianak
+false Asia/Pyongyang
+false Asia/Qatar
+false Asia/Qostanay
+false Asia/Qyzylorda
+false Asia/Rangoon
+false Asia/Riyadh
+false Asia/Saigon
+false Asia/Sakhalin
+false Asia/Samarkand
+false Asia/Seoul
+false Asia/Shanghai
+false Asia/Singapore
+false Asia/Srednekolymsk
+false Asia/Taipei
+false Asia/Tashkent
+false Asia/Tbilisi
+true Asia/Tehran
+true Asia/Tel_Aviv
+false Asia/Thimbu
+false Asia/Thimphu
+false Asia/Tokyo
+false Asia/Tomsk
+false Asia/Ujung_Pandang
+false Asia/Ulaanbaatar
+false Asia/Ulan_Bator
+false Asia/Urumqi
+false Asia/Ust-Nera
+false Asia/Vientiane
+false Asia/Vladivostok
+false Asia/Yakutsk
+false Asia/Yangon
+false Asia/Yekaterinburg
+false Asia/Yerevan
+true Atlantic/Azores
+true Atlantic/Bermuda
+true Atlantic/Canary
+false Atlantic/Cape_Verde
+true Atlantic/Faeroe
+true Atlantic/Faroe
+true Atlantic/Jan_Mayen
+true Atlantic/Madeira
+false Atlantic/Reykjavik
+false Atlantic/South_Georgia
+false Atlantic/St_Helena
+false Atlantic/Stanley
+false Australia/ACT
+false Australia/Adelaide
+false Australia/Brisbane
+false Australia/Broken_Hill
+false Australia/Canberra
+false Australia/Currie
+false Australia/Darwin
+false Australia/Eucla
+false Australia/Hobart
+false Australia/LHI
+false Australia/Lindeman
+false Australia/Lord_Howe
+false Australia/Melbourne
+false Australia/NSW
+false Australia/North
+false Australia/Perth
+false Australia/Queensland
+false Australia/South
+false Australia/Sydney
+false Australia/Tasmania
+false Australia/Victoria
+false Australia/West
+false Australia/Yancowinna
+true BDST
+false BDT
+false BNT
+false BORT
+false BOT
+false BRA
+true BRST
+false BRT
+true BST
+false BTT
+false Brazil/Acre
+false Brazil/DeNoronha
+false Brazil/East
+false Brazil/West
+true CADT
+false CAST
+false CCT
+true CDT
+true CEST
+false CET
+true CETDST
+true CHADT
+false CHAST
+false CHUT
+false CKT
+true CLST
+false CLT
+false COT
+false CST
+true CST6CDT
+false CXT
+true Canada/Atlantic
+true Canada/Central
+true Canada/Eastern
+true Canada/Mountain
+true Canada/Newfoundland
+true Canada/Pacific
+false Canada/Saskatchewan
+false Canada/Yukon
+false Chile/Continental
+false Chile/EasterIsland
+true Cuba
+false DAVT
+false DDUT
+false EASST
+false EAST
+false EAT
+true EDT
+true EEST
+false EET
+true EETDST
+true EGST
+false EGT
+false EST
+true EST5EDT
+false Egypt
+false Eire
+false Etc/GMT
+false Etc/GMT+0
+false Etc/GMT+1
+false Etc/GMT+10
+false Etc/GMT+11
+false Etc/GMT+12
+false Etc/GMT+2
+false Etc/GMT+3
+false Etc/GMT+4
+false Etc/GMT+5
+false Etc/GMT+6
+false Etc/GMT+7
+false Etc/GMT+8
+false Etc/GMT+9
+false Etc/GMT-0
+false Etc/GMT-1
+false Etc/GMT-10
+false Etc/GMT-11
+false Etc/GMT-12
+false Etc/GMT-13
+false Etc/GMT-14
+false Etc/GMT-2
+false Etc/GMT-3
+false Etc/GMT-4
+false Etc/GMT-5
+false Etc/GMT-6
+false Etc/GMT-7
+false Etc/GMT-8
+false Etc/GMT-9
+false Etc/GMT0
+false Etc/Greenwich
+false Etc/UCT
+false Etc/UTC
+false Etc/Universal
+false Etc/Zulu
+true Europe/Amsterdam
+true Europe/Andorra
+false Europe/Astrakhan
+true Europe/Athens
+true Europe/Belfast
+true Europe/Belgrade
+true Europe/Berlin
+true Europe/Bratislava
+true Europe/Brussels
+true Europe/Bucharest
+true Europe/Budapest
+true Europe/Busingen
+true Europe/Chisinau
+true Europe/Copenhagen
+false Europe/Dublin
+true Europe/Gibraltar
+true Europe/Guernsey
+true Europe/Helsinki
+true Europe/Isle_of_Man
+false Europe/Istanbul
+true Europe/Jersey
+false Europe/Kaliningrad
+true Europe/Kiev
+false Europe/Kirov
+true Europe/Lisbon
+true Europe/Ljubljana
+true Europe/London
+true Europe/Luxembourg
+true Europe/Madrid
+true Europe/Malta
+true Europe/Mariehamn
+false Europe/Minsk
+true Europe/Monaco
+false Europe/Moscow
+true Europe/Nicosia
+true Europe/Oslo
+true Europe/Paris
+true Europe/Podgorica
+true Europe/Prague
+true Europe/Riga
+true Europe/Rome
+false Europe/Samara
+true Europe/San_Marino
+true Europe/Sarajevo
+false Europe/Saratov
+false Europe/Simferopol
+true Europe/Skopje
+true Europe/Sofia
+true Europe/Stockholm
+true Europe/Tallinn
+true Europe/Tirane
+true Europe/Tiraspol
+false Europe/Ulyanovsk
+true Europe/Uzhgorod
+true Europe/Vaduz
+true Europe/Vatican
+true Europe/Vienna
+true Europe/Vilnius
+false Europe/Volgograd
+true Europe/Warsaw
+true Europe/Zagreb
+true Europe/Zaporozhye
+true Europe/Zurich
+false FET
+true FJST
+false FJT
+false FKST
+false FKT
+true FNST
+false FNT
+false Factory
+false GALT
+false GAMT
+true GB
+true GB-Eire
+false GEST
+false GET
+false GFT
+false GILT
+false GMT
+false GMT+0
+false GMT-0
+false GMT0
+false GYT
+false Greenwich
+false HKT
+false HST
+false Hongkong
+false ICT
+true IDT
+false IOT
+false IRKST
+false IRKT
+false IRT
+false IST
+false Iceland
+false Indian/Antananarivo
+false Indian/Chagos
+false Indian/Christmas
+false Indian/Cocos
+false Indian/Comoro
+false Indian/Kerguelen
+false Indian/Mahe
+false Indian/Maldives
+false Indian/Mauritius
+false Indian/Mayotte
+false Indian/Reunion
+true Iran
+true Israel
+false JAYT
+false JST
+false Jamaica
+false Japan
+true KDT
+true KGST
+false KGT
+false KOST
+false KRAST
+false KRAT
+false KST
+false Kwajalein
+false LHDT
+false LHST
+false LIGT
+false LINT
+false LKT
+false Libya
+false MAGST
+false MAGT
+false MART
+false MAWT
+true MDT
+true MEST
+true MESZ
+true MET
+true METDST
+false MEZ
+false MHT
+false MMT
+false MPT
+true MSD
+false MSK
+false MST
+true MST7MDT
+true MUST
+false MUT
+false MVT
+false MYT
+true Mexico/BajaNorte
+true Mexico/BajaSur
+true Mexico/General
+true NDT
+false NFT
+false NOVST
+false NOVT
+false NPT
+false NST
+false NUT
+false NZ
+false NZ-CHAT
+true NZDT
+false NZST
+false NZT
+true Navajo
+false OMSST
+false OMST
+true PDT
+false PET
+false PETST
+false PETT
+false PGT
+false PHOT
+false PHT
+true PKST
+false PKT
+true PMDT
+false PMST
+false PONT
+false PRC
+false PST
+true PST8PDT
+false PWT
+true PYST
+false PYT
+false Pacific/Apia
+false Pacific/Auckland
+false Pacific/Bougainville
+false Pacific/Chatham
+false Pacific/Chuuk
+false Pacific/Easter
+false Pacific/Efate
+false Pacific/Enderbury
+false Pacific/Fakaofo
+false Pacific/Fiji
+false Pacific/Funafuti
+false Pacific/Galapagos
+false Pacific/Gambier
+false Pacific/Guadalcanal
+false Pacific/Guam
+false Pacific/Honolulu
+false Pacific/Johnston
+false Pacific/Kiritimati
+false Pacific/Kosrae
+false Pacific/Kwajalein
+false Pacific/Majuro
+false Pacific/Marquesas
+false Pacific/Midway
+false Pacific/Nauru
+false Pacific/Niue
+false Pacific/Norfolk
+false Pacific/Noumea
+false Pacific/Pago_Pago
+false Pacific/Palau
+false Pacific/Pitcairn
+false Pacific/Pohnpei
+false Pacific/Ponape
+false Pacific/Port_Moresby
+false Pacific/Rarotonga
+false Pacific/Saipan
+false Pacific/Samoa
+false Pacific/Tahiti
+false Pacific/Tarawa
+false Pacific/Tongatapu
+false Pacific/Truk
+false Pacific/Wake
+false Pacific/Wallis
+false Pacific/Yap
+true Poland
+true Portugal
+false RET
+false ROC
+false ROK
+true SADT
+false SAST
+false SCT
+false SGT
+false Singapore
+false TAHT
+false TFT
+false TJT
+false TKT
+false TMT
+false TOT
+false TRUT
+false TVT
+false Turkey
+false UCT
+true ULAST
+false ULAT
+true US/Alaska
+true US/Aleutian
+false US/Arizona
+true US/Central
+true US/East-Indiana
+true US/Eastern
+false US/Hawaii
+true US/Indiana-Starke
+true US/Michigan
+true US/Mountain
+true US/Pacific
+false US/Samoa
+false UT
+false UTC
+true UYST
+false UYT
+true UZST
+false UZT
+false Universal
+false VET
+false VLAST
+false VLAT
+false VOLT
+false VUT
+false W-SU
+true WADT
+false WAKT
+false WAST
+false WAT
+true WDT
+true WET
+true WETDST
+false WFT
+true WGST
+false WGT
+false XJT
+false YAKST
+false YAKT
+false YAPT
+true YEKST
+false YEKT
+false Z
+false Zulu
+</TimeZones>
+      <StartupTime>1627633378</StartupTime>
+    </root>
+    <database id="2" parent="1" name="money_management_db">
+      <ObjectId>16394</ObjectId>
+      <Grants>11||10|C|G
+11||-9223372036854775808|U|G
+11||10|U|G
+2200||-9223372036854775808|C|G
+2200||10|C|G
+2200||-9223372036854775808|U|G
+2200||10|U|G
+13158||10|C|G
+13158||-9223372036854775808|U|G
+13158||10|U|G</Grants>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>552</IntrospectionStateNumber>
+      <Current>1</Current>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>13442</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <Grants>11||10|C|G
+11||-9223372036854775808|U|G
+11||10|U|G
+2200||-9223372036854775808|C|G
+2200||10|C|G
+2200||-9223372036854775808|U|G
+2200||10|U|G
+13158||10|C|G
+13158||-9223372036854775808|U|G
+13158||10|U|G</Grants>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>547</IntrospectionStateNumber>
+    </database>
+    <role id="4" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
+    </role>
+    <role id="5" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <RoleGrants>3374
+3375
+3377</RoleGrants>
+    </role>
+    <role id="6" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+    </role>
+    <role id="7" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+    </role>
+    <role id="8" parent="1" name="pg_read_server_files">
+      <ObjectId>4569</ObjectId>
+    </role>
+    <role id="9" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+    </role>
+    <role id="10" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+    </role>
+    <role id="11" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
+    </role>
+    <role id="12" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <CreateDb>1</CreateDb>
+      <CreateRole>1</CreateRole>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <BypassRls>1</BypassRls>
+    </role>
+    <tablespace id="13" parent="1" name="pg_default">
+      <ObjectId>1663</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1</StateNumber>
+    </tablespace>
+    <tablespace id="14" parent="1" name="pg_global">
+      <ObjectId>1664</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1</StateNumber>
+    </tablespace>
+    <schema id="15" parent="2" name="information_schema">
+      <ObjectId>13158</ObjectId>
+      <Grants>13177||10|d|G
+13177||10|a|G
+13177||10|x|G
+13177||-9223372036854775808|r|G
+13177||10|r|G
+13177||10|t|G
+13177||10|D|G
+13177||10|w|G
+13185||10|d|G
+13185||10|a|G
+13185||10|x|G
+13185||-9223372036854775808|r|G
+13185||10|r|G
+13185||10|t|G
+13185||10|D|G
+13185||10|w|G
+13189||10|d|G
+13189||10|a|G
+13189||10|x|G
+13189||-9223372036854775808|r|G
+13189||10|r|G
+13189||10|t|G
+13189||10|D|G
+13189||10|w|G
+13192||10|d|G
+13192||10|a|G
+13192||10|x|G
+13192||-9223372036854775808|r|G
+13192||10|r|G
+13192||10|t|G
+13192||10|D|G
+13192||10|w|G
+13196||10|d|G
+13196||10|a|G
+13196||10|x|G
+13196||-9223372036854775808|r|G
+13196||10|r|G
+13196||10|t|G
+13196||10|D|G
+13196||10|w|G
+13200||10|d|G
+13200||10|a|G
+13200||10|x|G
+13200||-9223372036854775808|r|G
+13200||10|r|G
+13200||10|t|G
+13200||10|D|G
+13200||10|w|G
+13204||10|d|G
+13204||10|a|G
+13204||10|x|G
+13204||-9223372036854775808|r|G
+13204||10|r|G
+13204||10|t|G
+13204||10|D|G
+13204||10|w|G
+13208||10|d|G
+13208||10|a|G
+13208||10|x|G
+13208||-9223372036854775808|r|G
+13208||10|r|G
+13208||10|t|G
+13208||10|D|G
+13208||10|w|G
+13212||10|d|G
+13212||10|a|G
+13212||10|x|G
+13212||-9223372036854775808|r|G
+13212||10|r|G
+13212||10|t|G
+13212||10|D|G
+13212||10|w|G
+13216||10|d|G
+13216||10|a|G
+13216||10|x|G
+13216||-9223372036854775808|r|G
+13216||10|r|G
+13216||10|t|G
+13216||10|D|G
+13216||10|w|G
+13220||10|d|G
+13220||10|a|G
+13220||10|x|G
+13220||-9223372036854775808|r|G
+13220||10|r|G
+13220||10|t|G
+13220||10|D|G
+13220||10|w|G
+13224||10|d|G
+13224||10|a|G
+13224||10|x|G
+13224||-9223372036854775808|r|G
+13224||10|r|G
+13224||10|t|G
+13224||10|D|G
+13224||10|w|G
+13228||10|d|G
+13228||10|a|G
+13228||10|x|G
+13228||-9223372036854775808|r|G
+13228||10|r|G
+13228||10|t|G
+13228||10|D|G
+13228||10|w|G
+13232||10|d|G
+13232||10|a|G
+13232||10|x|G
+13232||-9223372036854775808|r|G
+13232||10|r|G
+13232||10|t|G
+13232||10|D|G
+13232||10|w|G
+13236||10|d|G
+13236||10|a|G
+13236||10|x|G
+13236||-9223372036854775808|r|G
+13236||10|r|G
+13236||10|t|G
+13236||10|D|G
+13236||10|w|G
+13240||10|d|G
+13240||10|a|G
+13240||10|x|G
+13240||-9223372036854775808|r|G
+13240||10|r|G
+13240||10|t|G
+13240||10|D|G
+13240||10|w|G
+13244||10|d|G
+13244||10|a|G
+13244||10|x|G
+13244||-9223372036854775808|r|G
+13244||10|r|G
+13244||10|t|G
+13244||10|D|G
+13244||10|w|G
+13248||10|d|G
+13248||10|a|G
+13248||10|x|G
+13248||-9223372036854775808|r|G
+13248||10|r|G
+13248||10|t|G
+13248||10|D|G
+13248||10|w|G
+13252||10|d|G
+13252||10|a|G
+13252||10|x|G
+13252||-9223372036854775808|r|G
+13252||10|r|G
+13252||10|t|G
+13252||10|D|G
+13252||10|w|G
+13256||10|d|G
+13256||10|a|G
+13256||10|x|G
+13256||-9223372036854775808|r|G
+13256||10|r|G
+13256||10|t|G
+13256||10|D|G
+13256||10|w|G
+13259||10|d|G
+13259||10|a|G
+13259||10|x|G
+13259||-9223372036854775808|r|G
+13259||10|r|G
+13259||10|t|G
+13259||10|D|G
+13259||10|w|G
+13263||10|d|G
+13263||10|a|G
+13263||10|x|G
+13263||-9223372036854775808|r|G
+13263||10|r|G
+13263||10|t|G
+13263||10|D|G
+13263||10|w|G
+13267||10|d|G
+13267||10|a|G
+13267||10|x|G
+13267||-9223372036854775808|r|G
+13267||10|r|G
+13267||10|t|G
+13267||10|D|G
+13267||10|w|G
+13271||10|d|G
+13271||10|a|G
+13271||10|x|G
+13271||-9223372036854775808|r|G
+13271||10|r|G
+13271||10|t|G
+13271||10|D|G
+13271||10|w|G
+13274||10|d|G
+13274||10|a|G
+13274||10|x|G
+13274||-9223372036854775808|r|G
+13274||10|r|G
+13274||10|t|G
+13274||10|D|G
+13274||10|w|G
+13278||10|d|G
+13278||10|a|G
+13278||10|x|G
+13278||-9223372036854775808|r|G
+13278||10|r|G
+13278||10|t|G
+13278||10|D|G
+13278||10|w|G
+13281||10|d|G
+13281||10|a|G
+13281||10|x|G
+13281||-9223372036854775808|r|G
+13281||10|r|G
+13281||10|t|G
+13281||10|D|G
+13281||10|w|G
+13285||10|d|G
+13285||10|a|G
+13285||10|x|G
+13285||-9223372036854775808|r|G
+13285||10|r|G
+13285||10|t|G
+13285||10|D|G
+13285||10|w|G
+13288||10|d|G
+13288||10|a|G
+13288||10|x|G
+13288||-9223372036854775808|r|G
+13288||10|r|G
+13288||10|t|G
+13288||10|D|G
+13288||10|w|G
+13292||10|d|G
+13292||10|a|G
+13292||10|x|G
+13292||-9223372036854775808|r|G
+13292||10|r|G
+13292||10|t|G
+13292||10|D|G
+13292||10|w|G
+13297||10|d|G
+13297||10|a|G
+13297||10|x|G
+13297||-9223372036854775808|r|G
+13297||10|r|G
+13297||10|t|G
+13297||10|D|G
+13297||10|w|G
+13307||10|d|G
+13307||10|a|G
+13307||10|x|G
+13307||-9223372036854775808|r|G
+13307||10|r|G
+13307||10|t|G
+13307||10|D|G
+13307||10|w|G
+13312||10|d|G
+13312||10|a|G
+13312||10|x|G
+13312||-9223372036854775808|r|G
+13312||10|r|G
+13312||10|t|G
+13312||10|D|G
+13312||10|w|G
+13316||10|d|G
+13316||10|a|G
+13316||10|x|G
+13316||-9223372036854775808|r|G
+13316||10|r|G
+13316||10|t|G
+13316||10|D|G
+13316||10|w|G
+13320||10|d|G
+13320||10|a|G
+13320||10|x|G
+13320||-9223372036854775808|r|G
+13320||10|r|G
+13320||10|t|G
+13320||10|D|G
+13320||10|w|G
+13323||10|d|G
+13323||10|a|G
+13323||10|x|G
+13323||-9223372036854775808|r|G
+13323||10|r|G
+13323||10|t|G
+13323||10|D|G
+13323||10|w|G
+13331||10|d|G
+13331||10|a|G
+13331||10|x|G
+13331||-9223372036854775808|r|G
+13331||10|r|G
+13331||10|t|G
+13331||10|D|G
+13331||10|w|G
+13335||10|d|G
+13335||10|a|G
+13335||10|x|G
+13335||-9223372036854775808|r|G
+13335||10|r|G
+13335||10|t|G
+13335||10|D|G
+13335||10|w|G
+13339||10|d|G
+13339||10|a|G
+13339||10|x|G
+13339||-9223372036854775808|r|G
+13339||10|r|G
+13339||10|t|G
+13339||10|D|G
+13339||10|w|G
+13343||10|d|G
+13343||10|a|G
+13343||10|x|G
+13343||-9223372036854775808|r|G
+13343||10|r|G
+13343||10|t|G
+13343||10|D|G
+13343||10|w|G
+13346||10|d|G
+13346||10|a|G
+13346||10|x|G
+13346||-9223372036854775808|r|G
+13346||10|r|G
+13346||10|t|G
+13346||10|D|G
+13346||10|w|G
+13350||10|d|G
+13350||10|a|G
+13350||10|x|G
+13350||-9223372036854775808|r|G
+13350||10|r|G
+13350||10|t|G
+13350||10|D|G
+13350||10|w|G
+13353||10|d|G
+13353||10|a|G
+13353||10|x|G
+13353||-9223372036854775808|r|G
+13353||10|r|G
+13353||10|t|G
+13353||10|D|G
+13353||10|w|G
+13357||10|d|G
+13357||10|a|G
+13357||10|x|G
+13357||-9223372036854775808|r|G
+13357||10|r|G
+13357||10|t|G
+13357||10|D|G
+13357||10|w|G
+13361||10|d|G
+13361||10|a|G
+13361||10|x|G
+13361||-9223372036854775808|r|G
+13361||10|r|G
+13361||10|t|G
+13361||10|D|G
+13361||10|w|G
+13365||10|d|G
+13365||10|a|G
+13365||10|x|G
+13365||-9223372036854775808|r|G
+13365||10|r|G
+13365||10|t|G
+13365||10|D|G
+13365||10|w|G
+13369||10|d|G
+13369||10|a|G
+13369||10|x|G
+13369||-9223372036854775808|r|G
+13369||10|r|G
+13369||10|t|G
+13369||10|D|G
+13369||10|w|G
+13373||10|d|G
+13373||10|a|G
+13373||10|x|G
+13373||-9223372036854775808|r|G
+13373||10|r|G
+13373||10|t|G
+13373||10|D|G
+13373||10|w|G
+13377||10|d|G
+13377||10|a|G
+13377||10|x|G
+13377||-9223372036854775808|r|G
+13377||10|r|G
+13377||10|t|G
+13377||10|D|G
+13377||10|w|G
+13385||10|d|G
+13385||10|a|G
+13385||10|x|G
+13385||-9223372036854775808|r|G
+13385||10|r|G
+13385||10|t|G
+13385||10|D|G
+13385||10|w|G
+13391||10|d|G
+13391||10|a|G
+13391||10|x|G
+13391||-9223372036854775808|r|G
+13391||10|r|G
+13391||10|t|G
+13391||10|D|G
+13391||10|w|G
+13394||10|d|G
+13394||10|a|G
+13394||10|x|G
+13394||-9223372036854775808|r|G
+13394||10|r|G
+13394||10|t|G
+13394||10|D|G
+13394||10|w|G
+13401||10|d|G
+13401||10|a|G
+13401||10|x|G
+13401||-9223372036854775808|r|G
+13401||10|r|G
+13401||10|t|G
+13401||10|D|G
+13401||10|w|G
+13404||10|d|G
+13404||10|a|G
+13404||10|x|G
+13404||-9223372036854775808|r|G
+13404||10|r|G
+13404||10|t|G
+13404||10|D|G
+13404||10|w|G
+13411||10|d|G
+13411||10|a|G
+13411||10|x|G
+13411||-9223372036854775808|r|G
+13411||10|r|G
+13411||10|t|G
+13411||10|D|G
+13411||10|w|G
+13414||10|d|G
+13414||10|a|G
+13414||10|x|G
+13414||-9223372036854775808|r|G
+13414||10|r|G
+13414||10|t|G
+13414||10|D|G
+13414||10|w|G
+13421||10|d|G
+13421||10|a|G
+13421||10|x|G
+13421||-9223372036854775808|r|G
+13421||10|r|G
+13421||10|t|G
+13421||10|D|G
+13421||10|w|G
+13425||10|d|G
+13425||10|a|G
+13425||10|x|G
+13425||-9223372036854775808|r|G
+13425||10|r|G
+13425||10|t|G
+13425||10|D|G
+13425||10|w|G</Grants>
+      <StateNumber>293</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="16" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <Grants>764||10|X|G
+765||10|X|G
+767||10|X|G
+826||10|d|G
+826||10|a|G
+826||10|x|G
+826||-9223372036854775808|r|G
+826||10|r|G
+826||10|t|G
+826||10|D|G
+826||10|w|G
+1213||10|d|G
+1213||10|a|G
+1213||10|x|G
+1213||-9223372036854775808|r|G
+1213||10|r|G
+1213||10|t|G
+1213||10|D|G
+1213||10|w|G
+1214||10|d|G
+1214||10|a|G
+1214||10|x|G
+1214||-9223372036854775808|r|G
+1214||10|r|G
+1214||10|t|G
+1214||10|D|G
+1214||10|w|G
+1247||10|d|G
+1247||10|a|G
+1247||10|x|G
+1247||-9223372036854775808|r|G
+1247||10|r|G
+1247||10|t|G
+1247||10|D|G
+1247||10|w|G
+1249||10|d|G
+1249||10|a|G
+1249||10|x|G
+1249||-9223372036854775808|r|G
+1249||10|r|G
+1249||10|t|G
+1249||10|D|G
+1249||10|w|G
+1255||10|d|G
+1255||10|a|G
+1255||10|x|G
+1255||-9223372036854775808|r|G
+1255||10|r|G
+1255||10|t|G
+1255||10|D|G
+1255||10|w|G
+1259||10|d|G
+1259||10|a|G
+1259||10|x|G
+1259||-9223372036854775808|r|G
+1259||10|r|G
+1259||10|t|G
+1259||10|D|G
+1259||10|w|G
+1260||10|d|G
+1260||10|a|G
+1260||10|x|G
+1260||10|r|G
+1260||10|t|G
+1260||10|D|G
+1260||10|w|G
+1261||10|d|G
+1261||10|a|G
+1261||10|x|G
+1261||-9223372036854775808|r|G
+1261||10|r|G
+1261||10|t|G
+1261||10|D|G
+1261||10|w|G
+1262||10|d|G
+1262||10|a|G
+1262||10|x|G
+1262||-9223372036854775808|r|G
+1262||10|r|G
+1262||10|t|G
+1262||10|D|G
+1262||10|w|G
+1417||10|d|G
+1417||10|a|G
+1417||10|x|G
+1417||-9223372036854775808|r|G
+1417||10|r|G
+1417||10|t|G
+1417||10|D|G
+1417||10|w|G
+1418||10|d|G
+1418||10|a|G
+1418||10|x|G
+1418||10|r|G
+1418||10|t|G
+1418||10|D|G
+1418||10|w|G
+2172||10|X|G
+2173||10|X|G
+2224||10|d|G
+2224||10|a|G
+2224||10|x|G
+2224||-9223372036854775808|r|G
+2224||10|r|G
+2224||10|t|G
+2224||10|D|G
+2224||10|w|G
+2274||10|X|G
+2307||10|X|G
+2328||10|d|G
+2328||10|a|G
+2328||10|x|G
+2328||-9223372036854775808|r|G
+2328||10|r|G
+2328||10|t|G
+2328||10|D|G
+2328||10|w|G
+2396||10|d|G
+2396||10|a|G
+2396||10|x|G
+2396||-9223372036854775808|r|G
+2396||10|r|G
+2396||10|t|G
+2396||10|D|G
+2396||10|w|G
+2600||10|d|G
+2600||10|a|G
+2600||10|x|G
+2600||-9223372036854775808|r|G
+2600||10|r|G
+2600||10|t|G
+2600||10|D|G
+2600||10|w|G
+2601||10|d|G
+2601||10|a|G
+2601||10|x|G
+2601||-9223372036854775808|r|G
+2601||10|r|G
+2601||10|t|G
+2601||10|D|G
+2601||10|w|G
+2602||10|d|G
+2602||10|a|G
+2602||10|x|G
+2602||-9223372036854775808|r|G
+2602||10|r|G
+2602||10|t|G
+2602||10|D|G
+2602||10|w|G
+2603||10|d|G
+2603||10|a|G
+2603||10|x|G
+2603||-9223372036854775808|r|G
+2603||10|r|G
+2603||10|t|G
+2603||10|D|G
+2603||10|w|G
+2604||10|d|G
+2604||10|a|G
+2604||10|x|G
+2604||-9223372036854775808|r|G
+2604||10|r|G
+2604||10|t|G
+2604||10|D|G
+2604||10|w|G
+2605||10|d|G
+2605||10|a|G
+2605||10|x|G
+2605||-9223372036854775808|r|G
+2605||10|r|G
+2605||10|t|G
+2605||10|D|G
+2605||10|w|G
+2606||10|d|G
+2606||10|a|G
+2606||10|x|G
+2606||-9223372036854775808|r|G
+2606||10|r|G
+2606||10|t|G
+2606||10|D|G
+2606||10|w|G
+2607||10|d|G
+2607||10|a|G
+2607||10|x|G
+2607||-9223372036854775808|r|G
+2607||10|r|G
+2607||10|t|G
+2607||10|D|G
+2607||10|w|G
+2608||10|d|G
+2608||10|a|G
+2608||10|x|G
+2608||-9223372036854775808|r|G
+2608||10|r|G
+2608||10|t|G
+2608||10|D|G
+2608||10|w|G
+2609||10|d|G
+2609||10|a|G
+2609||10|x|G
+2609||-9223372036854775808|r|G
+2609||10|r|G
+2609||10|t|G
+2609||10|D|G
+2609||10|w|G
+2610||10|d|G
+2610||10|a|G
+2610||10|x|G
+2610||-9223372036854775808|r|G
+2610||10|r|G
+2610||10|t|G
+2610||10|D|G
+2610||10|w|G
+2611||10|d|G
+2611||10|a|G
+2611||10|x|G
+2611||-9223372036854775808|r|G
+2611||10|r|G
+2611||10|t|G
+2611||10|D|G
+2611||10|w|G
+2612||10|d|G
+2612||10|a|G
+2612||10|x|G
+2612||-9223372036854775808|r|G
+2612||10|r|G
+2612||10|t|G
+2612||10|D|G
+2612||10|w|G
+2613||10|d|G
+2613||10|a|G
+2613||10|x|G
+2613||10|r|G
+2613||10|t|G
+2613||10|D|G
+2613||10|w|G
+2615||10|d|G
+2615||10|a|G
+2615||10|x|G
+2615||-9223372036854775808|r|G
+2615||10|r|G
+2615||10|t|G
+2615||10|D|G
+2615||10|w|G
+2616||10|d|G
+2616||10|a|G
+2616||10|x|G
+2616||-9223372036854775808|r|G
+2616||10|r|G
+2616||10|t|G
+2616||10|D|G
+2616||10|w|G
+2617||10|d|G
+2617||10|a|G
+2617||10|x|G
+2617||-9223372036854775808|r|G
+2617||10|r|G
+2617||10|t|G
+2617||10|D|G
+2617||10|w|G
+2618||10|d|G
+2618||10|a|G
+2618||10|x|G
+2618||-9223372036854775808|r|G
+2618||10|r|G
+2618||10|t|G
+2618||10|D|G
+2618||10|w|G
+2619||10|d|G
+2619||10|a|G
+2619||10|x|G
+2619||10|r|G
+2619||10|t|G
+2619||10|D|G
+2619||10|w|G
+2620||10|d|G
+2620||10|a|G
+2620||10|x|G
+2620||-9223372036854775808|r|G
+2620||10|r|G
+2620||10|t|G
+2620||10|D|G
+2620||10|w|G
+2621||10|X|G
+2622||10|X|G
+2623||10|X|G
+2624||10|X|G
+2625||10|X|G
+2739||10|X|G
+2753||10|d|G
+2753||10|a|G
+2753||10|x|G
+2753||-9223372036854775808|r|G
+2753||10|r|G
+2753||10|t|G
+2753||10|D|G
+2753||10|w|G
+2848||10|X|G
+2964||10|d|G
+2964||10|a|G
+2964||10|x|G
+2964||-9223372036854775808|r|G
+2964||10|r|G
+2964||10|t|G
+2964||10|D|G
+2964||10|w|G
+2995||10|d|G
+2995||10|a|G
+2995||10|x|G
+2995||-9223372036854775808|r|G
+2995||10|r|G
+2995||10|t|G
+2995||10|D|G
+2995||10|w|G
+3071||10|X|G
+3072||10|X|G
+3079||10|d|G
+3079||10|a|G
+3079||10|x|G
+3079||-9223372036854775808|r|G
+3079||10|r|G
+3079||10|t|G
+3079||10|D|G
+3079||10|w|G
+3098||10|X|G
+3118||10|d|G
+3118||10|a|G
+3118||10|x|G
+3118||-9223372036854775808|r|G
+3118||10|r|G
+3118||10|t|G
+3118||10|D|G
+3118||10|w|G
+3256||10|d|G
+3256||10|a|G
+3256||10|x|G
+3256||-9223372036854775808|r|G
+3256||10|r|G
+3256||10|t|G
+3256||10|D|G
+3256||10|w|G
+3293||10|X|G
+3295||10|X|G
+3297||10|X|G
+3307||10|X|G
+3329||10|X|G
+3350||10|d|G
+3350||10|a|G
+3350||10|x|G
+3350||-9223372036854775808|r|G
+3350||10|r|G
+3350||10|t|G
+3350||10|D|G
+3350||10|w|G
+3353||10|X|G
+3353||3373|X|G
+3354||10|X|G
+3354||3373|X|G
+3381||10|d|G
+3381||10|a|G
+3381||10|x|G
+3381||-9223372036854775808|r|G
+3381||10|r|G
+3381||10|t|G
+3381||10|D|G
+3381||10|w|G
+3394||10|d|G
+3394||10|a|G
+3394||10|x|G
+3394||-9223372036854775808|r|G
+3394||10|r|G
+3394||10|t|G
+3394||10|D|G
+3394||10|w|G
+3400||10|X|G
+3401||10|X|G
+3429||10|d|G
+3429||10|a|G
+3429||10|x|G
+3429||10|r|G
+3429||10|t|G
+3429||10|D|G
+3429||10|w|G
+3436||10|X|G
+3456||10|d|G
+3456||10|a|G
+3456||10|x|G
+3456||-9223372036854775808|r|G
+3456||10|r|G
+3456||10|t|G
+3456||10|D|G
+3456||10|w|G
+3466||10|d|G
+3466||10|a|G
+3466||10|x|G
+3466||-9223372036854775808|r|G
+3466||10|r|G
+3466||10|t|G
+3466||10|D|G
+3466||10|w|G
+3501||10|d|G
+3501||10|a|G
+3501||10|x|G
+3501||-9223372036854775808|r|G
+3501||10|r|G
+3501||10|t|G
+3501||10|D|G
+3501||10|w|G
+3541||10|d|G
+3541||10|a|G
+3541||10|x|G
+3541||-9223372036854775808|r|G
+3541||10|r|G
+3541||10|t|G
+3541||10|D|G
+3541||10|w|G
+3576||10|d|G
+3576||10|a|G
+3576||10|x|G
+3576||-9223372036854775808|r|G
+3576||10|r|G
+3576||10|t|G
+3576||10|D|G
+3576||10|w|G
+3592||10|d|G
+3592||10|a|G
+3592||10|x|G
+3592||-9223372036854775808|r|G
+3592||10|r|G
+3592||10|t|G
+3592||10|D|G
+3592||10|w|G
+3596||10|d|G
+3596||10|a|G
+3596||10|x|G
+3596||-9223372036854775808|r|G
+3596||10|r|G
+3596||10|t|G
+3596||10|D|G
+3596||10|w|G
+3600||10|d|G
+3600||10|a|G
+3600||10|x|G
+3600||-9223372036854775808|r|G
+3600||10|r|G
+3600||10|t|G
+3600||10|D|G
+3600||10|w|G
+3601||10|d|G
+3601||10|a|G
+3601||10|x|G
+3601||-9223372036854775808|r|G
+3601||10|r|G
+3601||10|t|G
+3601||10|D|G
+3601||10|w|G
+3602||10|d|G
+3602||10|a|G
+3602||10|x|G
+3602||-9223372036854775808|r|G
+3602||10|r|G
+3602||10|t|G
+3602||10|D|G
+3602||10|w|G
+3603||10|d|G
+3603||10|a|G
+3603||10|x|G
+3603||-9223372036854775808|r|G
+3603||10|r|G
+3603||10|t|G
+3603||10|D|G
+3603||10|w|G
+3764||10|d|G
+3764||10|a|G
+3764||10|x|G
+3764||-9223372036854775808|r|G
+3764||10|r|G
+3764||10|t|G
+3764||10|D|G
+3764||10|w|G
+3775||10|X|G
+3776||10|X|G
+3777||10|X|G
+3800||10|X|G
+3801||10|X|G
+3826||10|X|G
+3827||10|X|G
+3828||10|X|G
+5029||10|X|G
+5029||3373|X|G
+5030||10|X|G
+5030||3373|X|G
+5031||10|X|G
+5031||3373|X|G
+5052||10|X|G
+6000||10|d|G
+6000||10|a|G
+6000||10|x|G
+6000||-9223372036854775808|r|G
+6000||10|r|G
+6000||10|t|G
+6000||10|D|G
+6000||10|w|G
+6100||10|d|G
+6100||10|a|G
+6100||10|x|G
+6100||10|r|G
+6100|2,3,4,5,7,9|-9223372036854775808|r|G
+6100||10|t|G
+6100||10|D|G
+6100||10|w|G
+6102||10|d|G
+6102||10|a|G
+6102||10|x|G
+6102||-9223372036854775808|r|G
+6102||10|r|G
+6102||10|t|G
+6102||10|D|G
+6102||10|w|G
+6104||10|d|G
+6104||10|a|G
+6104||10|x|G
+6104||-9223372036854775808|r|G
+6104||10|r|G
+6104||10|t|G
+6104||10|D|G
+6104||10|w|G
+6106||10|d|G
+6106||10|a|G
+6106||10|x|G
+6106||-9223372036854775808|r|G
+6106||10|r|G
+6106||10|t|G
+6106||10|D|G
+6106||10|w|G
+12087||10|d|G
+12087||10|a|G
+12087||10|x|G
+12087||-9223372036854775808|r|G
+12087||10|r|G
+12087||10|t|G
+12087||10|D|G
+12087||10|w|G
+12091||10|d|G
+12091||10|a|G
+12091||10|x|G
+12091||10|r|G
+12091||10|t|G
+12091||10|D|G
+12091||10|w|G
+12095||10|d|G
+12095||10|a|G
+12095||10|x|G
+12095||-9223372036854775808|r|G
+12095||10|r|G
+12095||10|t|G
+12095||10|D|G
+12095||10|w|G
+12098||10|d|G
+12098||10|a|G
+12098||10|x|G
+12098||-9223372036854775808|r|G
+12098||10|r|G
+12098||10|t|G
+12098||10|D|G
+12098||10|w|G
+12101||10|d|G
+12101||10|a|G
+12101||10|x|G
+12101||-9223372036854775808|r|G
+12101||10|r|G
+12101||10|t|G
+12101||10|D|G
+12101||10|w|G
+12105||10|d|G
+12105||10|a|G
+12105||10|x|G
+12105||-9223372036854775808|r|G
+12105||10|r|G
+12105||10|t|G
+12105||10|D|G
+12105||10|w|G
+12109||10|d|G
+12109||10|a|G
+12109||10|x|G
+12109||-9223372036854775808|r|G
+12109||10|r|G
+12109||10|t|G
+12109||10|D|G
+12109||10|w|G
+12113||10|d|G
+12113||10|a|G
+12113||10|x|G
+12113||-9223372036854775808|r|G
+12113||10|r|G
+12113||10|t|G
+12113||10|D|G
+12113||10|w|G
+12117||10|d|G
+12117||10|a|G
+12117||10|x|G
+12117||-9223372036854775808|r|G
+12117||10|r|G
+12117||10|t|G
+12117||10|D|G
+12117||10|w|G
+12121||10|d|G
+12121||10|a|G
+12121||10|x|G
+12121||-9223372036854775808|r|G
+12121||10|r|G
+12121||10|t|G
+12121||10|D|G
+12121||10|w|G
+12125||10|d|G
+12125||10|a|G
+12125||10|x|G
+12125||-9223372036854775808|r|G
+12125||10|r|G
+12125||10|t|G
+12125||10|D|G
+12125||10|w|G
+12129||10|d|G
+12129||10|a|G
+12129||10|x|G
+12129||-9223372036854775808|r|G
+12129||10|r|G
+12129||10|t|G
+12129||10|D|G
+12129||10|w|G
+12133||10|d|G
+12133||10|a|G
+12133||10|x|G
+12133||-9223372036854775808|r|G
+12133||10|r|G
+12133||10|t|G
+12133||10|D|G
+12133||10|w|G
+12137||10|d|G
+12137||10|a|G
+12137||10|x|G
+12137||-9223372036854775808|r|G
+12137||10|r|G
+12137||10|t|G
+12137||10|D|G
+12137||10|w|G
+12141||10|d|G
+12141||10|a|G
+12141||10|x|G
+12141||-9223372036854775808|r|G
+12141||10|r|G
+12141||10|t|G
+12141||10|D|G
+12141||10|w|G
+12144||10|d|G
+12144||10|a|G
+12144||10|x|G
+12144||-9223372036854775808|r|G
+12144||10|r|G
+12144||10|t|G
+12144||10|D|G
+12144||10|w|G
+12147||10|d|G
+12147||10|a|G
+12147||10|x|G
+12147||-9223372036854775808|r|G
+12147||10|r|G
+12147||10|t|G
+12147||10|D|G
+12147||10|w|G
+12150||10|d|G
+12150||10|a|G
+12150||10|x|G
+12150||-9223372036854775808|r|G
+12150||10|r|G
+12150||10|t|G
+12150||10|D|G
+12150||10|w|G
+12154||10|d|G
+12154||10|a|G
+12154||10|x|G
+12154||-9223372036854775808|r|G
+12154||10|r|G
+12154||10|t|G
+12154||10|D|G
+12154||10|w|G
+12158||10|d|G
+12158||10|a|G
+12158||10|x|G
+12158||-9223372036854775808|r|G
+12158||10|r|G
+12158||10|t|G
+12158||10|D|G
+12158||10|w|G
+12161||10|d|G
+12161||10|a|G
+12161||10|x|G
+12161||-9223372036854775808|r|G
+12161||10|r|G
+12161||10|t|G
+12161||10|D|G
+12161||10|w|G
+12165||10|d|G
+12165||10|a|G
+12165||10|x|G
+12165||-9223372036854775808|r|G
+12165||10|r|G
+12165||10|t|G
+12165||10|D|G
+12165||-9223372036854775808|w|G
+12165||10|w|G
+12170||10|d|G
+12170||10|a|G
+12170||10|x|G
+12170||10|r|G
+12170||10|t|G
+12170||10|D|G
+12170||10|w|G
+12173||10|d|G
+12173||10|a|G
+12173||10|x|G
+12173||10|r|G
+12173||10|t|G
+12173||10|D|G
+12173||10|w|G
+12176||10|d|G
+12176||10|a|G
+12176||10|x|G
+12176||-9223372036854775808|r|G
+12176||10|r|G
+12176||10|t|G
+12176||10|D|G
+12176||10|w|G
+12179||10|d|G
+12179||10|a|G
+12179||10|x|G
+12179||-9223372036854775808|r|G
+12179||10|r|G
+12179||10|t|G
+12179||10|D|G
+12179||10|w|G
+12182||10|d|G
+12182||10|a|G
+12182||10|x|G
+12182||10|r|G
+12182||10|t|G
+12182||10|D|G
+12182||10|w|G
+12185||10|d|G
+12185||10|a|G
+12185||10|x|G
+12185||10|r|G
+12185||10|t|G
+12185||10|D|G
+12185||10|w|G
+12188||10|d|G
+12188||10|a|G
+12188||10|x|G
+12188||-9223372036854775808|r|G
+12188||10|r|G
+12188||10|t|G
+12188||10|D|G
+12188||10|w|G
+12192||10|d|G
+12192||10|a|G
+12192||10|x|G
+12192||-9223372036854775808|r|G
+12192||10|r|G
+12192||10|t|G
+12192||10|D|G
+12192||10|w|G
+12196||10|d|G
+12196||10|a|G
+12196||10|x|G
+12196||-9223372036854775808|r|G
+12196||10|r|G
+12196||10|t|G
+12196||10|D|G
+12196||10|w|G
+12200||10|d|G
+12200||10|a|G
+12200||10|x|G
+12200||-9223372036854775808|r|G
+12200||10|r|G
+12200||10|t|G
+12200||10|D|G
+12200||10|w|G
+12203||10|d|G
+12203||10|a|G
+12203||10|x|G
+12203||-9223372036854775808|r|G
+12203||10|r|G
+12203||10|t|G
+12203||10|D|G
+12203||10|w|G
+12207||10|d|G
+12207||10|a|G
+12207||10|x|G
+12207||-9223372036854775808|r|G
+12207||10|r|G
+12207||10|t|G
+12207||10|D|G
+12207||10|w|G
+12210||10|d|G
+12210||10|a|G
+12210||10|x|G
+12210||-9223372036854775808|r|G
+12210||10|r|G
+12210||10|t|G
+12210||10|D|G
+12210||10|w|G
+12214||10|d|G
+12214||10|a|G
+12214||10|x|G
+12214||-9223372036854775808|r|G
+12214||10|r|G
+12214||10|t|G
+12214||10|D|G
+12214||10|w|G
+12217||10|d|G
+12217||10|a|G
+12217||10|x|G
+12217||-9223372036854775808|r|G
+12217||10|r|G
+12217||10|t|G
+12217||10|D|G
+12217||10|w|G
+12220||10|d|G
+12220||10|a|G
+12220||10|x|G
+12220||-9223372036854775808|r|G
+12220||10|r|G
+12220||10|t|G
+12220||10|D|G
+12220||10|w|G
+12224||10|d|G
+12224||10|a|G
+12224||10|x|G
+12224||-9223372036854775808|r|G
+12224||10|r|G
+12224||10|t|G
+12224||10|D|G
+12224||10|w|G
+12227||10|d|G
+12227||10|a|G
+12227||10|x|G
+12227||-9223372036854775808|r|G
+12227||10|r|G
+12227||10|t|G
+12227||10|D|G
+12227||10|w|G
+12230||10|d|G
+12230||10|a|G
+12230||10|x|G
+12230||-9223372036854775808|r|G
+12230||10|r|G
+12230||10|t|G
+12230||10|D|G
+12230||10|w|G
+12234||10|d|G
+12234||10|a|G
+12234||10|x|G
+12234||-9223372036854775808|r|G
+12234||10|r|G
+12234||10|t|G
+12234||10|D|G
+12234||10|w|G
+12237||10|d|G
+12237||10|a|G
+12237||10|x|G
+12237||-9223372036854775808|r|G
+12237||10|r|G
+12237||10|t|G
+12237||10|D|G
+12237||10|w|G
+12240||10|d|G
+12240||10|a|G
+12240||10|x|G
+12240||-9223372036854775808|r|G
+12240||10|r|G
+12240||10|t|G
+12240||10|D|G
+12240||10|w|G
+12244||10|d|G
+12244||10|a|G
+12244||10|x|G
+12244||-9223372036854775808|r|G
+12244||10|r|G
+12244||10|t|G
+12244||10|D|G
+12244||10|w|G
+12247||10|d|G
+12247||10|a|G
+12247||10|x|G
+12247||-9223372036854775808|r|G
+12247||10|r|G
+12247||10|t|G
+12247||10|D|G
+12247||10|w|G
+12250||10|d|G
+12250||10|a|G
+12250||10|x|G
+12250||-9223372036854775808|r|G
+12250||10|r|G
+12250||10|t|G
+12250||10|D|G
+12250||10|w|G
+12254||10|d|G
+12254||10|a|G
+12254||10|x|G
+12254||-9223372036854775808|r|G
+12254||10|r|G
+12254||10|t|G
+12254||10|D|G
+12254||10|w|G
+12258||10|d|G
+12258||10|a|G
+12258||10|x|G
+12258||-9223372036854775808|r|G
+12258||10|r|G
+12258||10|t|G
+12258||10|D|G
+12258||10|w|G
+12261||10|d|G
+12261||10|a|G
+12261||10|x|G
+12261||-9223372036854775808|r|G
+12261||10|r|G
+12261||10|t|G
+12261||10|D|G
+12261||10|w|G
+12264||10|d|G
+12264||10|a|G
+12264||10|x|G
+12264||-9223372036854775808|r|G
+12264||10|r|G
+12264||10|t|G
+12264||10|D|G
+12264||10|w|G
+12267||10|d|G
+12267||10|a|G
+12267||10|x|G
+12267||-9223372036854775808|r|G
+12267||10|r|G
+12267||10|t|G
+12267||10|D|G
+12267||10|w|G
+12270||10|d|G
+12270||10|a|G
+12270||10|x|G
+12270||-9223372036854775808|r|G
+12270||10|r|G
+12270||10|t|G
+12270||10|D|G
+12270||10|w|G
+12273||10|d|G
+12273||10|a|G
+12273||10|x|G
+12273||-9223372036854775808|r|G
+12273||10|r|G
+12273||10|t|G
+12273||10|D|G
+12273||10|w|G
+12277||10|d|G
+12277||10|a|G
+12277||10|x|G
+12277||-9223372036854775808|r|G
+12277||10|r|G
+12277||10|t|G
+12277||10|D|G
+12277||10|w|G
+12281||10|d|G
+12281||10|a|G
+12281||10|x|G
+12281||-9223372036854775808|r|G
+12281||10|r|G
+12281||10|t|G
+12281||10|D|G
+12281||10|w|G
+12284||10|d|G
+12284||10|a|G
+12284||10|x|G
+12284||-9223372036854775808|r|G
+12284||10|r|G
+12284||10|t|G
+12284||10|D|G
+12284||10|w|G
+12288||10|d|G
+12288||10|a|G
+12288||10|x|G
+12288||-9223372036854775808|r|G
+12288||10|r|G
+12288||10|t|G
+12288||10|D|G
+12288||10|w|G
+12292||10|d|G
+12292||10|a|G
+12292||10|x|G
+12292||-9223372036854775808|r|G
+12292||10|r|G
+12292||10|t|G
+12292||10|D|G
+12292||10|w|G
+12295||10|d|G
+12295||10|a|G
+12295||10|x|G
+12295||-9223372036854775808|r|G
+12295||10|r|G
+12295||10|t|G
+12295||10|D|G
+12295||10|w|G
+12298||10|d|G
+12298||10|a|G
+12298||10|x|G
+12298||-9223372036854775808|r|G
+12298||10|r|G
+12298||10|t|G
+12298||10|D|G
+12298||10|w|G
+12302||10|d|G
+12302||10|a|G
+12302||10|x|G
+12302||-9223372036854775808|r|G
+12302||10|r|G
+12302||10|t|G
+12302||10|D|G
+12302||10|w|G
+12306||10|d|G
+12306||10|a|G
+12306||10|x|G
+12306||-9223372036854775808|r|G
+12306||10|r|G
+12306||10|t|G
+12306||10|D|G
+12306||10|w|G
+12310||10|d|G
+12310||10|a|G
+12310||10|x|G
+12310||-9223372036854775808|r|G
+12310||10|r|G
+12310||10|t|G
+12310||10|D|G
+12310||10|w|G
+12314||10|d|G
+12314||10|a|G
+12314||10|x|G
+12314||-9223372036854775808|r|G
+12314||10|r|G
+12314||10|t|G
+12314||10|D|G
+12314||10|w|G
+12318||10|d|G
+12318||10|a|G
+12318||10|x|G
+12318||-9223372036854775808|r|G
+12318||10|r|G
+12318||10|t|G
+12318||10|D|G
+12318||10|w|G
+12322||10|d|G
+12322||10|a|G
+12322||10|x|G
+12322||10|r|G
+12322||10|t|G
+12322||10|D|G
+12322||10|w|G</Grants>
+      <StateNumber>286</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="17" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <StateNumber>287</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>553</IntrospectionStateNumber>
+      <Current>1</Current>
+    </schema>
+    <table id="18" parent="17" name="date">
+      <ObjectId>16404</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>512</StateNumber>
+    </table>
+    <table id="19" parent="17" name="earning">
+      <ObjectId>16409</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>533</StateNumber>
+    </table>
+    <table id="20" parent="17" name="purchase">
+      <ObjectId>16417</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>536</StateNumber>
+    </table>
+    <column id="21" parent="18" name="day">
+      <Position>1</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>509</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="22" parent="18" name="cash_value_on_day_start">
+      <Position>2</Position>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>509</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="23" parent="18" name="cash_value_on_day_end">
+      <Position>3</Position>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>509</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="24" parent="18" name="cashless_value_on_day_start">
+      <Position>4</Position>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>509</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="25" parent="18" name="cashless_value_on_day_end">
+      <Position>5</Position>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>509</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <index id="26" parent="18" name="date_pkey">
+      <ObjectId>16407</ObjectId>
+      <StateNumber>509</StateNumber>
+      <ColNames>day</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationIds>0</CollationIds>
+      <ClassIds>3122</ClassIds>
+    </index>
+    <key id="27" parent="18" name="date_pkey">
+      <ObjectId>16408</ObjectId>
+      <StateNumber>509</StateNumber>
+      <ColNames>day</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>date_pkey</UnderlyingIndexName>
+    </key>
+    <column id="28" parent="19" name="earning_name">
+      <Position>1</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>512</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="29" parent="19" name="earning_type">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>512</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="30" parent="19" name="earning_cost">
+      <Position>3</Position>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>512</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="31" parent="19" name="count">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>512</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="32" parent="19" name="day">
+      <Position>5</Position>
+      <DataType>date|0s</DataType>
+      <StateNumber>512</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="33" parent="19" name="payment_type">
+      <Position>6</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>533</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <foreign-key id="34" parent="19" name="day_fk">
+      <ObjectId>16412</ObjectId>
+      <StateNumber>512</StateNumber>
+      <ColNames>day</ColNames>
+      <RefTableId>16404</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>date</RefTableName>
+      <RefKeyName>date_pkey</RefKeyName>
+      <RefColNames>day</RefColNames>
+    </foreign-key>
+    <column id="35" parent="20" name="purchase_name">
+      <Position>1</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>515</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="36" parent="20" name="purchase_type">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>515</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="37" parent="20" name="purchase_cost">
+      <Position>3</Position>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>515</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="38" parent="20" name="count">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>515</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="39" parent="20" name="day">
+      <Position>5</Position>
+      <DataType>date|0s</DataType>
+      <StateNumber>515</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="40" parent="20" name="payment_type">
+      <Position>6</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>536</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <foreign-key id="41" parent="20" name="day_fk">
+      <ObjectId>16420</ObjectId>
+      <StateNumber>515</StateNumber>
+      <ColNames>day</ColNames>
+      <RefTableId>16404</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>date</RefTableName>
+      <RefKeyName>date_pkey</RefKeyName>
+      <RefColNames>day</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

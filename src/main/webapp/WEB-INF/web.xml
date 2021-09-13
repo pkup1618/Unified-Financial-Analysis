@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+
+    <servlet>
+        <servlet-name>getAllDaysServlet</servlet-name>
+        <servlet-class>servlets.get_command_servlets.all_data_servlets.GetAllDaysServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getAllDaysServlet</servlet-name>
+        <url-pattern>/get-all-days</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getAllEarningsServlet</servlet-name>
+        <servlet-class>servlets.get_command_servlets.all_data_servlets.GetAllEarningsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getAllEarningsServlet</servlet-name>
+        <url-pattern>/get-all-earnings</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getAllPurchasesServlet</servlet-name>
+        <servlet-class>servlets.get_command_servlets.all_data_servlets.GetAllPurchasesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getAllPurchasesServlet</servlet-name>
+        <url-pattern>/get-all-purchases</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getDayEarnings</servlet-name>
+        <servlet-class>servlets.get_command_servlets.one_day_servlets.GetDayEarningsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getDayEarnings</servlet-name>
+        <url-pattern>/get-day-earnings</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getDayPurchases</servlet-name>
+        <servlet-class>servlets.get_command_servlets.one_day_servlets.GetDayPurchasesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getDayPurchases</servlet-name>
+        <url-pattern>/get-day-purchases</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getEarningsInTimePeriod</servlet-name>
+        <servlet-class>servlets.get_command_servlets.time_period_servlets.GetEarningsInTimePeriodServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getEarningsInTimePeriod</servlet-name>
+        <url-pattern>/get-earnings-in-time-period</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getPurchasesInTimePeriod</servlet-name>
+        <servlet-class>servlets.get_command_servlets.time_period_servlets.GetPurchasesInTimePeriodServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getPurchasesInTimePeriod</servlet-name>
+        <url-pattern>/get-purchases-in-time-period</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>setDayServlet</servlet-name>
+        <servlet-class>servlets.send_command_servlets.SetDayServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>setDayServlet</servlet-name>
+        <url-pattern>/set-day</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>setEarningServlet</servlet-name>
+        <servlet-class>servlets.send_command_servlets.SetEarningServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>setEarningServlet</servlet-name>
+        <url-pattern>/set-earning</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>setPurchaseServlet</servlet-name>
+        <servlet-class>servlets.send_command_servlets.SetPurchaseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>setPurchaseServlet</servlet-name>
+        <url-pattern>/set-purchase</url-pattern>
+    </servlet-mapping>
+
+    <resource-ref>
+        <description>DB Connection</description>
+        <res-ref-name>jdbc/TestDB</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
+</web-app>
