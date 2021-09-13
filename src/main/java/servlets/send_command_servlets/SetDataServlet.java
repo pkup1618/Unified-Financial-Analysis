@@ -45,7 +45,7 @@ public abstract class SetDataServlet extends ParentServlet {
 
             JSONObject failureAnswer = new JSONObject();
             failureAnswer.put("status", "bad request");
-            responseWriter.println(failureAnswer.toString());
+            responseWriter.println(failureAnswer);
         }
     }
 

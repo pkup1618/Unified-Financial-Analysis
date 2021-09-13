@@ -38,8 +38,7 @@ public abstract class GetElemsInTimePeriodServlet extends ParentServlet {
     }
 
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) {
 
         responseWriter = getResponsePrintWriter(response);
 
@@ -68,7 +67,7 @@ public abstract class GetElemsInTimePeriodServlet extends ParentServlet {
 
             JSONObject failureAnswer = new JSONObject();
             failureAnswer.put("status", "bad request");
-            responseWriter.println(failureAnswer.toString());
+            responseWriter.println(failureAnswer);
         }
 
     }

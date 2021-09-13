@@ -16,11 +16,10 @@ import java.sql.*;
  */
 public class DatabaseHandler {
 
-    private static Driver postgreSqlDriver;
     private static Connection connection;
 
     static {
-        postgreSqlDriver = null;
+        Driver postgreSqlDriver = null;
         connection = null;
         try {
             Class.forName("org.postgresql.Driver");

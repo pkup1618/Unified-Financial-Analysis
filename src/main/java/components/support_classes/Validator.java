@@ -54,7 +54,7 @@ public class Validator {
      * Проверить количество полей JSON-объекта
      * @param jsonObject JSON-объект
      * @param template JSON-объект (шаблон, для соответствия)
-     * @throws IncorrectBodyFormatException
+     * @throws IncorrectBodyFormatException если не прошёл проверку
      */
     private static void checkJsonSize(JSONObject jsonObject, JSONObject template) throws IncorrectBodyFormatException {
         if (!(jsonObject.size() == template.size())) {
@@ -66,13 +66,13 @@ public class Validator {
     //todo куда переместить метод?
     /**
      * Проврить JSON-строку на возможность преобразования в JSON-объект
-     * @param stringJson
-     * @throws IncorrectBodyFormatException
+     * @param stringJson JSON-строка
+     * @throws IncorrectBodyFormatException если не прошёл проверку
      */
     private static void checkRequestBodyParseAbility(String stringJson) throws IncorrectBodyFormatException {
-        JSONObject requestJsonObject = null;
+
         try {
-            requestJsonObject = (JSONObject) JSONValue.parseWithException(stringJson);
+            JSONValue.parseWithException(stringJson);
         }
         catch(org.json.simple.parser.ParseException e) {
             throw new IncorrectBodyFormatException();
@@ -82,8 +82,8 @@ public class Validator {
 
     /**
      * Проверить заголовок Content-Type на соответствие значению application/json
-     * @param request
-     * @throws IncorrectBodyFormatException
+     * @param request запрос
+     * @throws IncorrectBodyFormatException если не прошёл проверку
      */
     private static void checkContentType(HttpServletRequest request) throws IncorrectBodyFormatException {
         String contentType = request.getHeader("Content-Type");

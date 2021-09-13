@@ -23,7 +23,7 @@ import java.text.SimpleDateFormat;
 public abstract class ParentServlet extends HttpServlet {
 
     /** Поле обработчика базы данных */
-    protected DatabaseHandler databaseHandler = new DatabaseHandler();
+    protected final DatabaseHandler databaseHandler = new DatabaseHandler();
     protected JSONObject requestJsonTemplate;
 
     /**
