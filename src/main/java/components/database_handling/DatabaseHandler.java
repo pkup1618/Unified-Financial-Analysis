@@ -28,7 +28,7 @@ public class DatabaseHandler {
 
             connection = DriverManager.getConnection(
                     "jdbc:postgresql://localhost:5709/money_management_db",
-                    "postgres", "Pautina111");
+                    "postgres", "password");
 
             if (connection == null) {
                 System.out.println("Нет соединения с БД!");
