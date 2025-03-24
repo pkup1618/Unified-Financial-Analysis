@@ -1,9 +1,7 @@
-# Default ignored files
-/shelf/
-/.idea/workspace.xml
-/target/
-# Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
-# Editor-based HTTP Client requests
-/httpRequests/
+/.idea
+/target
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
