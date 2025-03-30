@@ -3,13 +3,26 @@
  */
 package org.example
 
-class App {
-    val greeting: String
-        get() {
-            return "Hello World!"
-        }
-}
+import com.itextpdf.text.pdf.PdfReader
+import com.itextpdf.text.pdf.parser.PdfReaderContentParser
+import com.itextpdf.text.pdf.parser.SimpleTextExtractionStrategy
+import com.itextpdf.text.pdf.parser.TextExtractionStrategy
 
-fun main() {
-    println(App().greeting)
+
+fun main(args: Array<String>) {
+    val reader = PdfReader("docs/sber-pdf.pdf")
+    val parser = PdfReaderContentParser(reader)
+
+
+
+    for (i in 1..reader.numberOfPages) {
+        val strategy: TextExtractionStrategy =
+            parser.processContent(i, SimpleTextExtractionStrategy())
+
+        val text = strategy.resultantText
+        println("Страница $i:")
+        println(text)
+    }
+
+    reader.close()
 }
