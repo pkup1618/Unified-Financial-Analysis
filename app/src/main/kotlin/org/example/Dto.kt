@@ -1,6 +1,7 @@
 package org.example
 
 import java.math.BigDecimal
+import java.text.SimpleDateFormat
 import java.util.Date
 
 data class Operation(
@@ -8,7 +9,19 @@ data class Operation(
     val cost: BigDecimal,
     val category: String?,
     val description: String?,
-)
+) {
+    override fun toString(): String {
+        val dateFormat = SimpleDateFormat("dd.MM.yyyy HH:mm")
+        val formattedDate = dateFormat.format(date)
+
+        return "Operation(\n" +
+               "    date = $formattedDate,\n" +
+               "    cost = ${cost.setScale(2)} RUB,\n" +
+               "    category = ${category ?: "<no category>"},\n" +
+               "    description = ${description?.takeIf { it.isNotBlank() } ?: "<no description>\n"}" +
+               ")"
+    }
+}
 
 data class Coords2D(
     val x: Float,

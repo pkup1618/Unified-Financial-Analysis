@@ -6,6 +6,9 @@ package org.example
 import com.itextpdf.text.pdf.PdfReader
 import com.itextpdf.text.pdf.parser.*
 import com.itextpdf.text.pdf.parser.Vector
+import java.math.BigDecimal
+import java.text.SimpleDateFormat
+import java.time.LocalDate
 import java.util.*
 
 
@@ -49,23 +52,33 @@ fun parseSberDoc() {
             .filterValues { it.matches(Regex("^\\d{6}\$")) }
             .map { it.key.y }
 
-        val usefulEntries = entries.filterKeys { it.y in usefulEntriesHeights }
+        val usefulEntries = entries
+            .filterKeys { it.x < 530 }
+            .filterKeys { it.y in usefulEntriesHeights }
         val groupedStrings = usefulEntries.entries.groupBy { it.key.y }
 
-        groupedStrings.forEach { height ->
-            println("----------------")
-            println("Высота: ${height.key}")
-            println()
-            height.value.forEach {
-                println(it.value)
-            }
+        val operations = groupedStrings.map { height ->
+            val objectAsArray = height.value.map { it.value }
+
+            val trim1 = objectAsArray[4]
+                .replace("\\u00A0".toRegex(), "")
+
+            val trim2 = trim1
+                .replace(",".toRegex(), ".")
+
+            Operation(
+                SimpleDateFormat("dd.MM.yyyy HH:mm").parse("${objectAsArray[0]} ${objectAsArray[1]}"),
+                trim2.toBigDecimal(),
+                objectAsArray[3],
+                null,
+            )
         }
 
-//        for (entry in usefulEntries) {
-//            println("----------------")
-//            println("(x: ${entry.key.x}, y: ${entry.key.y})")
-//            println(entry.value)
-//        }
+        operations.forEach {
+            println(it)
+        }
+
+
     }
 
     reader.close()
