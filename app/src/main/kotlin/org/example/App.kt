@@ -4,25 +4,78 @@
 package org.example
 
 import com.itextpdf.text.pdf.PdfReader
-import com.itextpdf.text.pdf.parser.PdfReaderContentParser
-import com.itextpdf.text.pdf.parser.SimpleTextExtractionStrategy
-import com.itextpdf.text.pdf.parser.TextExtractionStrategy
+import com.itextpdf.text.pdf.parser.*
+import com.itextpdf.text.pdf.parser.Vector
+import java.util.*
 
 
 fun main(args: Array<String>) {
     val reader = PdfReader("docs/sber-pdf.pdf")
-    val parser = PdfReaderContentParser(reader)
-
-
 
     for (i in 1..reader.numberOfPages) {
-        val strategy: TextExtractionStrategy =
-            parser.processContent(i, SimpleTextExtractionStrategy())
+        val strategy = TextExtractionStrategyImpl()
 
-        val text = strategy.resultantText
-        println("Страница $i:")
-        println(text)
+        // вызываем, чтобы наша реализация стратегия получила информацию о тексте на странице
+        PdfTextExtractor.getTextFromPage(reader, i, strategy)
+
+        println("Page : $i")
+
+        for (x in strategy.getStringsWithCoordinates()) {
+            for (y in x.value) {
+                println("----------------")
+                println("(x: ${x.key}, y: ${y.key})")
+                println(y.value)
+            }
+        }
     }
 
     reader.close()
+}
+
+
+class TextExtractionStrategyImpl : TextExtractionStrategy {
+    private val textMap = mutableMapOf<Float, MutableMap<Float, String>>()
+
+    override fun getResultantText(): String {
+        val stringBuilder = StringBuilder()
+
+        val sortedTextWithCoords = textMap
+            .mapValues { it.value.toSortedMap() }
+            .toSortedMap()
+
+        sortedTextWithCoords.forEach { x ->
+            x.value.forEach { y ->
+                stringBuilder.append(y.value)
+            }
+        }
+
+        return stringBuilder.toString()
+    }
+
+    override fun renderText(renderInfo: TextRenderInfo) {
+        // вытаскиваем координаты
+        val x = renderInfo.baseline.startPoint[Vector.I1]
+        val y = renderInfo.baseline.startPoint[Vector.I2]
+
+        // если до этого мы не добавляли элементы из этой строчки файла.
+        if (!textMap.containsKey(y)) {
+            textMap[y] = TreeMap()
+        }
+
+        textMap[y]?.set(x, renderInfo.text)
+    }
+
+    // метод для извлечения строчек с их y-координатой
+    fun getStringsWithCoordinates(): SortedMap<Float, SortedMap<Float, String>> {
+
+        return textMap
+            .mapValues { it.value.toSortedMap() }
+            .toSortedMap()
+    }
+
+    override fun beginTextBlock() {}
+
+    override fun renderImage(imageRenderInfo: ImageRenderInfo?) {}
+
+    override fun endTextBlock() {}
 }
