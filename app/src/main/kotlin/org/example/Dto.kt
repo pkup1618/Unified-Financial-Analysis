@@ -18,7 +18,7 @@ data class Operation(
                "    date = $formattedDate,\n" +
                "    cost = ${cost.setScale(2)} RUB,\n" +
                "    category = ${category ?: "<no category>"},\n" +
-               "    description = ${description?.takeIf { it.isNotBlank() } ?: "<no description>\n"}" +
+               "    description = ${description?.takeIf { it.isNotBlank() } ?: "<no description>"}\n" +
                ")"
     }
 }
