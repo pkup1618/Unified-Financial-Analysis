@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 
 data class Operation(
+    val id: Long?,
     val date: Date,
     val cost: BigDecimal,
     val category: String?,

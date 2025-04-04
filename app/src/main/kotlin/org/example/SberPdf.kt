@@ -27,6 +27,7 @@ fun parseSberDoc(path: String) {
 
 
             Operation(
+                null,
                 SimpleDateFormat("dd.MM.yyyy HH:mm").parse("${objectAsArray[0]} ${objectAsArray[1]}"),
                 objectAsArray[4]
                     .replace("\\u00A0".toRegex(), "")

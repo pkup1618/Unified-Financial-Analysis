@@ -56,6 +56,7 @@ fun parseTinkoffDoc(path: String) {
                 .joinToString(" ")
 
             Operation(
+                id = null,
                 date = date,
                 cost = cost,
                 category = null,
