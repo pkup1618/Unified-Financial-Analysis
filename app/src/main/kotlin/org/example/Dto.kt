@@ -2,7 +2,7 @@ package org.example
 
 import java.math.BigDecimal
 import java.text.SimpleDateFormat
-import java.util.Date
+import java.util.*
 
 data class Operation(
     val id: Long?,
@@ -15,7 +15,7 @@ data class Operation(
         val dateFormat = SimpleDateFormat("dd.MM.yyyy HH:mm")
         val formattedDate = dateFormat.format(date)
 
-        return "Operation(\n" +
+        return "\nOperation(\n" +
                "    date = $formattedDate,\n" +
                "    cost = ${cost.setScale(2)} RUB,\n" +
                "    category = ${category ?: "<no category>"},\n" +
