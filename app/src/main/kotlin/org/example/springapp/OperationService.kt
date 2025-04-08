@@ -9,7 +9,6 @@ import java.sql.Date
 
 @Service
 class OperationService(private val jdbcTemplate: JdbcTemplate) {
-
     fun getAllOperations(): List<Operation> {
         return jdbcTemplate.query("SELECT * FROM operations") { rs, _ ->
             Operation(
@@ -42,6 +41,10 @@ class OperationService(private val jdbcTemplate: JdbcTemplate) {
         }
     }
 
+    fun saveOperationsFromPdf(operations: List<Operation>): List<Operation> {
+        return operations.map { createOperation(it) }
+    }
+
     fun saveAllOperation(operations: List<Operation>): List<Operation> {
         return operations.map { operation ->
             if (operation.id == null) {
@@ -52,12 +55,20 @@ class OperationService(private val jdbcTemplate: JdbcTemplate) {
         }
     }
 
-    fun deleteOperation(id: Long): Boolean {
-        val rowsAffected = jdbcTemplate.update("DELETE FROM operations WHERE id = ?", id)
-        return rowsAffected > 0
-    }
-
     private fun createOperation(operation: Operation): Operation {
+        // Проверяем, существует ли уже операция с такими date и cost
+        val existingOperation = jdbcTemplate.query(
+            "SELECT id FROM operations WHERE date = ? AND cost = ? LIMIT 1",
+            { rs, _ -> rs.getLong("id") },
+            Date(operation.date.time),
+            operation.cost
+        ).firstOrNull()
+
+        // Если операция уже существует, возвращаем её с имеющимся ID
+        if (existingOperation != null) {
+            return operation.copy(id = existingOperation)
+        }
+
         val keyHolder = GeneratedKeyHolder()
         jdbcTemplate.update({ connection ->
             val ps = connection.prepareStatement(
@@ -76,17 +87,18 @@ class OperationService(private val jdbcTemplate: JdbcTemplate) {
 
     private fun updateOperation(operation: Operation): Operation {
         jdbcTemplate.update(
-            "UPDATE operations SET date = ?, cost = ?, category = ?, description = ? WHERE id = ?",
-            Date(operation.date.time),
-            operation.cost,
+            "UPDATE operations SET, category = ?, description = ? WHERE date = ?, cost = ?",
             operation.category,
             operation.description,
-            operation.id
+            Date(operation.date.time),
+            operation.cost,
         )
         return operation
     }
 
-    fun saveOperationsFromPdf(operations: List<Operation>): List<Operation> {
-        return operations.map { createOperation(it) }
+
+    fun deleteOperation(id: Long): Boolean {
+        val rowsAffected = jdbcTemplate.update("DELETE FROM operations WHERE id = ?", id)
+        return rowsAffected > 0
     }
 }

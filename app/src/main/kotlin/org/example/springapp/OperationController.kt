@@ -17,7 +17,7 @@ class OperationController(private val operationService: OperationService) {
         return operationService.getAllOperations()
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{date}{cost}")
     fun getOperationById(@PathVariable id: Long): ResponseEntity<Operation> {
         val operation = operationService.getOperationById(id)
         return if (operation != null) {
